@@ -1,0 +1,316 @@
+{
+  "status": "completed",
+  "passed": true,
+  "formal_experiment": true,
+  "compatibility_trial": false,
+  "runtime_profile": "satr-py312-formal-v1",
+  "started": "2026-10-18T21:33:46+0800",
+  "stages_completed": [
+    "coco20_voc_5k: baseline inference regression under Python 3.12",
+    "m3fd: baseline inference regression under Python 3.12",
+    "coco20_voc_5k: refreshed formal-config detector gate",
+    "m3fd: refreshed formal-config detector gate",
+    "coco20_voc_5k: formal train 20 epochs",
+    "coco20_voc_5k: final validation",
+    "coco20_voc_5k: common VOC20 scoring",
+    "m3fd: formal train 100 epochs",
+    "m3fd: final validation"
+  ],
+  "environment_checks": {
+    "coco20_voc_5k": {
+      "passed": true,
+      "tolerance": 0.0001,
+      "delta": {
+        "AP50_95": 8.823019373993546e-07,
+        "AP50": 1.8674574501220675e-06,
+        "AP75": 5.386960804099061e-07
+      },
+      "baseline_metrics": {
+        "split": "valid",
+        "independent_test": false,
+        "dataset_file": "roboflow",
+        "full_coco2017": null,
+        "dataset_annotation_sha256": "e15c3d6bb9fb3862c48f719046aee840b75bb49f91ef1f6a7088f6ca8282c84e",
+        "weights_sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+        "resolution": 384,
+        "AP50_95": 0.5435514820392302,
+        "AP50": 0.7483498984791926,
+        "AP75": 0.5798207251315455,
+        "AP_small": 0.25476049276302837,
+        "AP_medium": 0.5450007171347745,
+        "AP_large": 0.7560623513291306,
+        "AR_100": 0.7006675345622702,
+        "COCO_stats": [
+          0.5435514820392302,
+          0.7483498984791926,
+          0.5798207251315455,
+          0.25476049276302837,
+          0.5450007171347745,
+          0.7560623513291306,
+          0.3845606839838072,
+          0.6411756261906767,
+          0.7006675345622702,
+          0.415721338215139,
+          0.7315179560628511,
+          0.9132895091944332
+        ],
+        "eval_precision": "float32",
+        "upstream": {
+          "repository": "https://github.com/roboflow/rf-detr",
+          "tag": "1.3.0",
+          "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+          "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+        },
+        "gpu": "NVIDIA GeForce RTX 2080 Ti"
+      },
+      "py312_metrics": {
+        "split": "valid",
+        "independent_test": false,
+        "dataset_file": "roboflow",
+        "full_coco2017": null,
+        "dataset_annotation_sha256": "e15c3d6bb9fb3862c48f719046aee840b75bb49f91ef1f6a7088f6ca8282c84e",
+        "weights_sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+        "resolution": 384,
+        "AP50_95": 0.5435523643411676,
+        "AP50": 0.7483517659366428,
+        "AP75": 0.5798212638276259,
+        "AP_small": 0.25476831117221,
+        "AP_medium": 0.5450003901398994,
+        "AP_large": 0.756062650575638,
+        "AR_100": 0.7006675345622702,
+        "COCO_stats": [
+          0.5435523643411676,
+          0.7483517659366428,
+          0.5798212638276259,
+          0.25476831117221,
+          0.5450003901398994,
+          0.756062650575638,
+          0.3845606839838072,
+          0.6411756261906767,
+          0.7006675345622702,
+          0.415721338215139,
+          0.7315179560628511,
+          0.9132895091944332
+        ],
+        "eval_precision": "float32",
+        "upstream": {
+          "repository": "https://github.com/roboflow/rf-detr",
+          "tag": "1.3.0",
+          "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+          "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+        },
+        "gpu": "NVIDIA GeForce RTX 2080 Ti"
+      },
+      "scope": "Same-checkpoint inference regression only; this does not establish training equivalence."
+    },
+    "m3fd": {
+      "passed": true,
+      "tolerance": 0.0001,
+      "delta": {
+        "AP50_95": 1.120171227830813e-06,
+        "AP50": -3.625533653295321e-07,
+        "AP75": 7.416338503318798e-07
+      },
+      "baseline_metrics": {
+        "split": "valid",
+        "independent_test": false,
+        "dataset_file": "roboflow",
+        "full_coco2017": null,
+        "dataset_annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07",
+        "weights_sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+        "resolution": 384,
+        "AP50_95": 0.49299145753600815,
+        "AP50": 0.7822657925564942,
+        "AP75": 0.5025611602158688,
+        "AP_small": 0.1904391777175984,
+        "AP_medium": 0.5400297425002986,
+        "AP_large": 0.8183100912248298,
+        "AR_100": 0.5691276738238924,
+        "COCO_stats": [
+          0.49299145753600815,
+          0.7822657925564942,
+          0.5025611602158688,
+          0.1904391777175984,
+          0.5400297425002986,
+          0.8183100912248298,
+          0.31321777299218956,
+          0.5357761829361366,
+          0.5691276738238924,
+          0.3075053949592979,
+          0.6262001696545372,
+          0.8574418492930557
+        ],
+        "eval_precision": "float32",
+        "upstream": {
+          "repository": "https://github.com/roboflow/rf-detr",
+          "tag": "1.3.0",
+          "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+          "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+        },
+        "gpu": "NVIDIA GeForce RTX 2080 Ti"
+      },
+      "py312_metrics": {
+        "split": "valid",
+        "independent_test": false,
+        "dataset_file": "roboflow",
+        "full_coco2017": null,
+        "dataset_annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07",
+        "weights_sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+        "resolution": 384,
+        "AP50_95": 0.492992577707236,
+        "AP50": 0.7822654300031289,
+        "AP75": 0.5025619018497192,
+        "AP_small": 0.19043940238788212,
+        "AP_medium": 0.5400315694299835,
+        "AP_large": 0.8183101032654224,
+        "AR_100": 0.5691343461313082,
+        "COCO_stats": [
+          0.492992577707236,
+          0.7822654300031289,
+          0.5025619018497192,
+          0.19043940238788212,
+          0.5400315694299835,
+          0.8183101032654224,
+          0.31321777299218956,
+          0.5357780418104023,
+          0.5691343461313082,
+          0.3075173309837388,
+          0.6262044707298061,
+          0.8574418492930557
+        ],
+        "eval_precision": "float32",
+        "upstream": {
+          "repository": "https://github.com/roboflow/rf-detr",
+          "tag": "1.3.0",
+          "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+          "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+        },
+        "gpu": "NVIDIA GeForce RTX 2080 Ti"
+      },
+      "scope": "Same-checkpoint inference regression only; this does not establish training equivalence."
+    }
+  },
+  "experiments": {
+    "coco20_voc_5k": {
+      "epochs_completed": 20,
+      "output": "/autodl-fs/data/rfdetr_runs/py312_formal_v1/coco20_voc_5k_satr_seed0",
+      "status": {
+        "status": "completed",
+        "started": "2026-10-18T21:46:16+0800",
+        "finished": "2026-10-19T07:25:07+0800",
+        "checkpoint_sha256": "383623a3fc9b64a94a5440de477312be7c9875b15d1148ef9d457fe093dc7448"
+      },
+      "metrics": {
+        "split": "valid",
+        "independent_test": false,
+        "dataset_file": "roboflow",
+        "full_coco2017": null,
+        "dataset_annotation_sha256": "e15c3d6bb9fb3862c48f719046aee840b75bb49f91ef1f6a7088f6ca8282c84e",
+        "weights_sha256": "383623a3fc9b64a94a5440de477312be7c9875b15d1148ef9d457fe093dc7448",
+        "resolution": 384,
+        "AP50_95": 0.006422170006189272,
+        "AP50": 0.01688236848549676,
+        "AP75": 0.004496619653844135,
+        "AP_small": 0.002193611955036564,
+        "AP_medium": 0.007604144758561724,
+        "AP_large": 0.009152594975052233,
+        "AR_100": 0.19357533620173242,
+        "COCO_stats": [
+          0.006422170006189272,
+          0.01688236848549676,
+          0.004496619653844135,
+          0.002193611955036564,
+          0.007604144758561724,
+          0.009152594975052233,
+          0.06583205600662945,
+          0.155468047791982,
+          0.19357533620173242,
+          0.024443997359842155,
+          0.12945733870066875,
+          0.32735159316842555
+        ],
+        "eval_precision": "float32",
+        "upstream": {
+          "repository": "https://github.com/roboflow/rf-detr",
+          "tag": "1.3.0",
+          "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+          "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+        },
+        "gpu": "NVIDIA GeForce RTX 2080 Ti"
+      }
+    },
+    "m3fd": {
+      "epochs_completed": 100,
+      "output": "/autodl-fs/data/rfdetr_runs/py312_formal_v1/m3fd_satr_seed0",
+      "status": {
+        "status": "completed",
+        "started": "2026-10-19T07:38:26+0800",
+        "finished": "2026-10-20T04:52:52+0800",
+        "checkpoint_sha256": "493adc544be0fda736163bfa90f24501b65d380e5a44055eca682d5b70228f35"
+      },
+      "metrics": {
+        "split": "valid",
+        "independent_test": false,
+        "dataset_file": "roboflow",
+        "full_coco2017": null,
+        "dataset_annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07",
+        "weights_sha256": "493adc544be0fda736163bfa90f24501b65d380e5a44055eca682d5b70228f35",
+        "resolution": 384,
+        "AP50_95": 0.3145133498878808,
+        "AP50": 0.5609337188931948,
+        "AP75": 0.30598140566917253,
+        "AP_small": 0.0740304589020631,
+        "AP_medium": 0.3388317327182885,
+        "AP_large": 0.5720587797692357,
+        "AR_100": 0.42864607000196936,
+        "COCO_stats": [
+          0.3145133498878808,
+          0.5609337188931948,
+          0.30598140566917253,
+          0.0740304589020631,
+          0.3388317327182885,
+          0.5720587797692357,
+          0.22149441845770104,
+          0.38719326306462437,
+          0.42864607000196936,
+          0.17058702833390055,
+          0.48027418431329694,
+          0.7260926169642179
+        ],
+        "eval_precision": "float32",
+        "upstream": {
+          "repository": "https://github.com/roboflow/rf-detr",
+          "tag": "1.3.0",
+          "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+          "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+        },
+        "gpu": "NVIDIA GeForce RTX 2080 Ti"
+      }
+    }
+  },
+  "pilot_weights_used": false,
+  "baseline_training_python": "3.11",
+  "formal_training_python": "3.12",
+  "stage": "m3fd: final validation",
+  "configurations": {
+    "coco20_voc_5k": {
+      "path": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/configs/nano_coco20_voc_5k_satr_py312_formal_v1.json",
+      "epochs": 20,
+      "config_sha256": "022b1fb9b09ff355bada28cd976b3f893b05f935fc6aca5162a729f5fa0aa1a5",
+      "classifier_rows": 21,
+      "source_encoder_sha256": "f07aa810bc9df4a4a25236c2f7bcc451fb04f61e4a6e80ef6e25cee34d6c1e29"
+    },
+    "m3fd": {
+      "path": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/configs/nano_m3fd_satr_py312_formal_v1.json",
+      "epochs": 100,
+      "config_sha256": "882b6a78f513f7b249bdc63245803747611ec0c3261afdf3f4fb4ea771ab0b78",
+      "classifier_rows": 91,
+      "source_encoder_sha256": "f07aa810bc9df4a4a25236c2f7bcc451fb04f61e4a6e80ef6e25cee34d6c1e29"
+    }
+  },
+  "pilot_summary_sha256": "5f64d68d12ec17ce5d33c33e0f944fb19601ee5845276af3260edad6f5f06ad0",
+  "baseline_audit_sha256": "367d9d68ffd55b02d716d1f6205470565aad46564b5c804d1711414528dd1aee",
+  "python": "/root/autodl-fs/venvs/rfdetr-satr-py312/bin/python",
+  "training_completed": true,
+  "finished": "2026-10-20T04:59:09+0800"
+}

@@ -1,0 +1,382 @@
+{
+  "passed": true,
+  "profile": "SATR-SSM code excluded",
+  "SATR_implementation_files": 0,
+  "SATR_source_download_assets": 0,
+  "removed_file_count": 397,
+  "executable_files_audited": [
+    {
+      "path": "scripts/download_assets.py",
+      "sha256": "c2b79904c09aae1cb59f46e5ebc49530acb69e0350f2a33d1da98e88ca78a861"
+    },
+    {
+      "path": "scripts/evaluate.sh",
+      "sha256": "5b4fb6a83f0ed1666e8449d18aa15fd3ba4694be2f3a03273ad56eac444eb27f"
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "sha256": "8374f8afed4c55752694598cacadaa0d65fa000bb8c12828e6fbe9170e4eeb41"
+    },
+    {
+      "path": "scripts/render_demo.py",
+      "sha256": "09824109357472acfd9d77ad8e7f2858609f440dcc96e72cddab30f9fd484833"
+    },
+    {
+      "path": "scripts/run_demo.sh",
+      "sha256": "acf7324c0282c069bd0ae4543377409b16bd647ffa622b9076d717cc33db31de"
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "sha256": "24577d2da5083da9f2bc5a2dd59a2104b50a8fb1b5c5dc463f867943494f6ceb"
+    },
+    {
+      "path": "scripts/train.sh",
+      "sha256": "8785e2cdb85808bf030dc1188a9a9b2c877fb5a13e92b8ac86f423a7893b8d10"
+    },
+    {
+      "path": "scripts/verify_submission.py",
+      "sha256": "eabea400fcdcf7258f53740a82cfe7102b30255104ee78e79c6dd57f92a84458"
+    },
+    {
+      "path": "src/rfdetr_baseline/category_initialization.py",
+      "sha256": "6ac7b77848379d2ab8d016d8a8eeecaaebb55a9cf47147540164b6b3b5eb8eb3"
+    },
+    {
+      "path": "src/rfdetr_baseline/coco_tools.py",
+      "sha256": "06ed485bb92dadbec94e4070ccd818383923f5bc173533ae82f2ac47429f02f7"
+    },
+    {
+      "path": "src/rfdetr_baseline/coco_voc20.py",
+      "sha256": "2f9e601469bde88abc1093a29e61ca19d608702a95517a58c23af47930952943"
+    },
+    {
+      "path": "src/rfdetr_baseline/common.py",
+      "sha256": "53149030969d33887531088ef0b1975f3531c96c3ea184e77d423fb7e880953a"
+    },
+    {
+      "path": "src/rfdetr_baseline/dataset_backend.py",
+      "sha256": "d78e7f5df33d8c9f0304ab70c0b0713d4db90adf43345a077752fdc139a89a11"
+    },
+    {
+      "path": "src/rfdetr_baseline/data_tools.py",
+      "sha256": "89d1f173a55dab6d135c2e12cd26e0bd730ea8c51a188f9554f0c0736d55a7c5"
+    },
+    {
+      "path": "src/rfdetr_baseline/download_weights.py",
+      "sha256": "4f498177a655db69ec18277835ec49f0634ee0325d4c843727cfffb6c74e573a"
+    },
+    {
+      "path": "src/rfdetr_baseline/evaluate.py",
+      "sha256": "511e666482194be8bd034a49071cd5ef86790b48a17431a12a68d102d4bed3a7"
+    },
+    {
+      "path": "src/rfdetr_baseline/predict.py",
+      "sha256": "5264de832388dc45219613358e6bfea1d78bf7e18a5dc33884fa1295a8053080"
+    },
+    {
+      "path": "src/rfdetr_baseline/prepare_ourmamba_m3fd.py",
+      "sha256": "efb9a5dbc534580cded39cb5a58b0100523984ca1a3a4e50b1a35a13ad770bce"
+    },
+    {
+      "path": "src/rfdetr_baseline/run_both.py",
+      "sha256": "4c06268838266a5ba40e9a5126f8be655ea1a7935be0910eee580e5371a9cdf9"
+    },
+    {
+      "path": "src/rfdetr_baseline/smoke_test.py",
+      "sha256": "89272116a5a6069db3ebad530df54a78a563ccb9a9bfba33bce75d425718d647"
+    },
+    {
+      "path": "src/rfdetr_baseline/train.py",
+      "sha256": "22899651bd782e56f9aa84e964e00726104bfa57a36c816724a3960f6642fe6c"
+    },
+    {
+      "path": "src/rfdetr_baseline/training_safety.py",
+      "sha256": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a"
+    },
+    {
+      "path": "src/rfdetr_baseline/train_coco_paired.py",
+      "sha256": "5d11018666089c659d3e0f73e8e7032f1bd6ee4dbd56e3c9fda9a291b0246777"
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_env.py",
+      "sha256": "b962293173e29765f058066547614275a31ce96ddf2d8c0170f50025e9dfda8a"
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_voc20_heads.py",
+      "sha256": "b3f606d12abeda6dbdd400223a9358d3f6bef01f177a8a5cb7137d04bf4af501"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/acceptance.sh",
+      "sha256": "1c3f536eaa09d176ed8b6ae33c2f479b55a8e5d9e27b7ed1e8a20a4bf5e32f67"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/download_coco.sh",
+      "sha256": "25c301a36a8a22633137585326c98da766cc5557d23a1f284d64c3b3c0e6960a"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/evaluate.sh",
+      "sha256": "816d3ee3c0b5bc3d24bf8732d91d86aff2e67a86abf055f6da518a174a441e20"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/repair_autodl_storage.sh",
+      "sha256": "aef73d2ad7eab26f239ff85b32810745b952cf5543ac39f102d535a8e2a6e3b1"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/setup_autodl.sh",
+      "sha256": "5211276afd2d9b084761fe1205c4372eb0c7170149869e2d301868df32236dd8"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train.sh",
+      "sha256": "ea9eb8857e1513011ac1a91fa2292bdc3830655881cae1061feab74ea1e0ad16"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_both.sh",
+      "sha256": "2f72fb8167851655163f2043ecac578573948efc11b2478cec6f70455752c30c"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_coco.sh",
+      "sha256": "eff7596f807d3572cb743062f8a0d297f53e3f6d9cda4e75d806f8229cce1bce"
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_coco_paired.sh",
+      "sha256": "b7bedee6fc6f4d2b04b2b6bf56974d39664d3b488c5fbf0eea78a8265c20de79"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_checkpoint.py",
+      "sha256": "5f32ced989ac530953184fe681c2cf069e15ba33ff2a9cc0758f0792503b050e"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_coco.py",
+      "sha256": "047bcf9bab03b9d650f29ab7c21ab8f0dc711190d879eeaa43c90bdf251bf276"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_coco_voc20.py",
+      "sha256": "4bff181fb35f198e5687e68e898aac52ebf9fee800e48f3feff83d8641d5d428"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_data.py",
+      "sha256": "f6ec7369183a6fc6f49c155fb747345cc9b704294eac77bb5a0bcd1a000f28d4"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_m3fd_prepare.py",
+      "sha256": "e9d5cfb802678959160ba3551b69c7bc3e424e976e59a611627507724f385af3"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_paired_queue.py",
+      "sha256": "ac5f7f72c4f9d74204fdb6e4f03f501434d47d88726aac633f12a1f55767ebd5"
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_precision.py",
+      "sha256": "0a02a1c8836f20f7cdf7c07a266db5428d705ac4c1e725dc8419a4f3f6022e99"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/config.py",
+      "sha256": "54837dee1602e1e02766b5e415f491ce184474e1b0e724eb1d17540a475283bb"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/detr.py",
+      "sha256": "c04b923e1ba6be2d7f930e47f312b14d866fb58a74ba8226159292d9bb277ff5"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/engine.py",
+      "sha256": "73d710ce0b429cf0da337868842756b84ee89af4b6bad41b6f1c66c510cd94f9"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/main.py",
+      "sha256": "d734f7ae5d716b298b7b2c0c59b1b76ddcc34549d266b5926bcbc1ce333041c2"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/__init__.py",
+      "sha256": "165d20144dd535a1e37603c309e0e4c989634173cfc75043e4a839be1194fac6"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/cli/main.py",
+      "sha256": "748e0c779da86f3ba927d2cfb34c4a0b185aeb09ea44b4e6094bb5562e3734f5"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/datasets/coco.py",
+      "sha256": "c5b7ef3495d223060c616bf5476dde8301b8c0b8dabb18dd746dbaf835cc62e0"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/datasets/coco_eval.py",
+      "sha256": "7fd9d86e21c1b4e7b3ae5fcb1ffa3cddfba8586025048b7f0a84e3c96ea3d1b3"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/datasets/o365.py",
+      "sha256": "aa34767f28b080a3979b7cde34bfe6683b66e014e5c62da83ab8ad15bbd4a782"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/datasets/transforms.py",
+      "sha256": "a8cc501ee3acf2968cdaa450494b8900a8995b2d59b58cf5a232f38012e98bd0"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/datasets/__init__.py",
+      "sha256": "be7142311f62c167d3928415cb7a1655c22e24cedfb85cd6f315b2518a7d0f66"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/benchmark.py",
+      "sha256": "bfc7af828c4c217289e0038c358fe1715636e8e290105bec5bd4de203a6a150f"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/export.py",
+      "sha256": "0bef9f3fb5a0785b2516049bf5ed5cf2560267ca4de644f73edd13be21de96e0"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/lwdetr.py",
+      "sha256": "30529b005880b0d44765605b1c2429c759dbaef776529427555a9bee67363f14"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/matcher.py",
+      "sha256": "9b16c983c567292f562cc58fb1801798264a1d6fbf02a6d8362bdcbf18fec63f"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/position_encoding.py",
+      "sha256": "cb777470e7397fee52234b0e5f226fcd869e24de4aa5593f225e1aa7612f10bc"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/segmentation_head.py",
+      "sha256": "8802c3f7744f8e63f5a28c7b3ae76266104565252f9caeef798b933ec98d7bc9"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/transformer.py",
+      "sha256": "2e3a1aa05f5d8bf3def0d83f1f42ff5ca7450a3054d76a1e1078d2f9806db54e"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/__init__.py",
+      "sha256": "7596d66509221d4053daa22598b42d17254806a4a759b7c2fa64f1d962ed477b"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/benchmark.py",
+      "sha256": "d07992f8eed23cc1a327412d2e4d3c1eb5e17ac6e4d443cbd1df623a286a8898"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/box_ops.py",
+      "sha256": "adc7568c3cd3333eda0c5ecdfe164055985879051ed209c813697b7e0ce4d154"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/coco_classes.py",
+      "sha256": "f8cabe1e27cee2703009f47ca8036107890e7827016b5eb15941935719af1b84"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/drop_scheduler.py",
+      "sha256": "37864b29d70a370b526c5b6fd8bb264ab1e556b5ca29d9074ca97bfffd66b141"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/early_stopping.py",
+      "sha256": "5f997349a31113d2b5d9e94f4ae96b67d2c579f955d3633ac34ae059ec8b61fe"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/files.py",
+      "sha256": "e5a3a578cbc8fa55f88762339760f335b4e8807eefca5b98a6948ee4e9cd30df"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/get_param_dicts.py",
+      "sha256": "b99b3e664058c8aeea3e545eb751580f0032290da57334118153f6532beabfe5"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/metrics.py",
+      "sha256": "84622bae8d6f574862b7d4a807ead21ea5307ce7d7129ee83bd31955dab089be"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/misc.py",
+      "sha256": "63b1056697f6ac242f12962c5ac955ce8c1d48771df9c3d55ad9cc09ebc4578a"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/obj365_to_coco_model.py",
+      "sha256": "4b01ecf6fc879de2f44512ac8ef05fffb92aba3e29d50a89ba1c41673dca820e"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/utils.py",
+      "sha256": "5c1d829c12ec2c19f3ab6d7a08b2fb3181ec5e6c9f6845e0b4fd28f457b05710"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/__init__.py",
+      "sha256": "e4153c3ef07cf85e502d9a5c7d890bdafc26e64f9de5c1e65e58e07a7973fc0d"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/optimizer.py",
+      "sha256": "2e0841e5c0805f9b7de162403daf099686e42a0d06bca35b42882680b9e84665"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/symbolic.py",
+      "sha256": "fd8d0ef227eb7be9f12e164d19cc3b1e1a0794bfdc6fd85cd5e8be573e6e303e"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/__init__.py",
+      "sha256": "42fefaab0cf6eed92b0407ac873ecb129cc23bb2107423621d4e9ef68018fa75"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/backbone.py",
+      "sha256": "a50de9080b06e1e6889b735f43571c9f8443aa51ea089f0f78d10cbd8b7e7678"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/base.py",
+      "sha256": "63669a252248645f5327cca4c21710f1a79b31252bc95f1c443ba222fb0af117"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2.py",
+      "sha256": "5a1293be86accda1797d540528e2f58efe8b0cb142717dba09dc521473f96c9b"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_with_windowed_attn.py",
+      "sha256": "7629d4818fb393d34c781aedb0600d912fd08aaba23c1cbeb4463832f72f146b"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/projector.py",
+      "sha256": "9e11c9f6b87a8c33fc10f303402ddf3aa0f653c137f99499102e594ff245e572"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/__init__.py",
+      "sha256": "e775ea3181127c7256be9a160953abcb3a20ba8cdc266db2a9a365b575c2f645"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/functions/ms_deform_attn_func.py",
+      "sha256": "50733bdfe0434ebcb74c72aa8d4e27bd1bc76df71a7f6b58e7e3d48186fbe90c"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/functions/__init__.py",
+      "sha256": "453911fefae8f3b0f52520bae42f582374680ef0bdcdd2a2a035ce5187faeb04"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/modules/ms_deform_attn.py",
+      "sha256": "c1efbe3f81b77e6a33aaf219926dec8f50725c72a5451ec84f5ba1c0c0dbd750"
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/modules/__init__.py",
+      "sha256": "3a40cdcd146fc93c3f4ba9702924582f6502e5fcd1ceccf687e9d0e6ff2d7b5f"
+    }
+  ],
+  "excluded_private_source_hashes_checked": 265,
+  "unchanged_evidence_and_upstream_files": 264,
+  "PPT_unchanged": true,
+  "slides": 19,
+  "report_pages": 13,
+  "proposal_pages": 1,
+  "raw_log_epochs": {
+    "A": 20,
+    "B": 20,
+    "C": 20,
+    "D": 20,
+    "E": 100,
+    "F": 100
+  },
+  "best_EMA_epochs_1based": {
+    "A": 8,
+    "B": 1,
+    "C": 2,
+    "D": 20,
+    "E": 91,
+    "F": 98
+  },
+  "six_group_final_AP_and_parameters_unchanged": true,
+  "SATR_paper_manuscript_included": false,
+  "historical_SATR_results_preserved": true
+}

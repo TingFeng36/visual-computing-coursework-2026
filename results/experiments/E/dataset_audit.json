@@ -1,0 +1,64 @@
+{
+  "dataset_dir": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr",
+  "classes": [
+    "People",
+    "Car",
+    "Bus",
+    "Motorcycle",
+    "Lamp",
+    "Truck"
+  ],
+  "splits": {
+    "train": {
+      "images": 2100,
+      "objects": 17485,
+      "objects_per_category": {
+        "1": 5837,
+        "2": 9330,
+        "4": 1188,
+        "3": 356,
+        "5": 272,
+        "6": 502
+      },
+      "annotation_sha256": "171430a17f97cc54a15a675704bcfbc9a7b28274d700b4345e0b08a9761de58f"
+    },
+    "valid": {
+      "images": 2100,
+      "objects": 16923,
+      "objects_per_category": {
+        "2": 8966,
+        "1": 5641,
+        "4": 1217,
+        "3": 344,
+        "5": 249,
+        "6": 506
+      },
+      "annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07"
+    },
+    "test": {
+      "images": 2100,
+      "objects": 16923,
+      "objects_per_category": {
+        "2": 8966,
+        "1": 5641,
+        "4": 1217,
+        "3": 344,
+        "5": 249,
+        "6": 506
+      },
+      "annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07"
+    }
+  },
+  "test_is_validation_alias": true,
+  "passed": true,
+  "dataset_file": "roboflow",
+  "num_classes": 6,
+  "category_names": {
+    "1": "People",
+    "2": "Car",
+    "3": "Bus",
+    "4": "Motorcycle",
+    "5": "Lamp",
+    "6": "Truck"
+  }
+}

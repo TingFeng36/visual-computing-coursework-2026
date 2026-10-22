@@ -1,0 +1,7 @@
+# Core libraries shared by both archived environments.
+# Install torch/torchvision using the official CUDA 12.1 wheel index first.
+torch==2.4.1+cu121
+torchvision==0.19.1+cu121
+-r src/rfdetr_baseline/requirements.txt
+# SATR (Python 3.12 only): install matching native wheels separately:
+# mamba-ssm 2.2.2; causal-conv1d 1.4.0; CUDA12 / torch2.4 / cxx11abiFALSE / cp312.

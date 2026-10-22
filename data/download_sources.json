@@ -1,0 +1,10 @@
+{
+  "verification_date": "2026-10-22",
+  "COCO_official_page": "https://cocodataset.org/#download",
+  "COCO_verified_HTTPS_endpoints": {
+    "train2017": "https://s3.amazonaws.com/images.cocodataset.org/zips/train2017.zip",
+    "val2017": "https://s3.amazonaws.com/images.cocodataset.org/zips/val2017.zip",
+    "annotations_trainval2017": "https://s3.amazonaws.com/images.cocodataset.org/annotations/annotations_trainval2017.zip"
+  },
+  "M3FD_provider": "https://github.com/JinyuanLiu-CV/TarDAL#download"
+}

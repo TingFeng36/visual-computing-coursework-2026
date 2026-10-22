@@ -1,0 +1,7 @@
+第三方来源及公开范围
+
+1. RF-DETR：Roboflow，Apache License 2.0。固定tag1.3.0、commit03aa832eb07126b8bbd0fff45790b1f2ad45be2b；许可证见src/rfdetr_baseline/vendor/rf_detr/LICENSE。
+2. 本提交不提供任何SATR-SSM实现或修改版Ultralytics代码，也不提供SATR导出源码附件。报告、PPT及pipeline图为课程研究说明；SATR-SSM为大创成果，原论文稿不收录。
+3. COCO和M3FD图片、标注的权利及使用条款归原数据提供方。本包仅保留固定划分、少量样例及样例标注，数据下载见data/README.md。
+4. 权重、原始日志、指标及预测属于已完成实验的记录，获取方式与SHA256见checkpoints和external_assets.json；公开权重附件不含Python实现。
+5. RF-DETR参数截图来自其论文Table7。第三方引用不改变材料原有权利归属。

@@ -1,0 +1,76 @@
+{
+  "source_yaml": "/root/autodl-tmp/OurMamba/datasets_M3FD/m3fd.yaml",
+  "source_yaml_sha256": "49e329d4915eb1802c5ec3f47850c468feb71f1c7b26315546f2ef205fa9d705",
+  "dataset_root": "/root/autodl-tmp/OurMamba/datasets_M3FD",
+  "class_names": [
+    "People",
+    "Car",
+    "Bus",
+    "Motorcycle",
+    "Lamp",
+    "Truck"
+  ],
+  "source_split_counts": {
+    "train": 2100,
+    "val": 2100
+  },
+  "validation_origin": "original val",
+  "test_is_validation_alias": true,
+  "sample_images": [
+    {
+      "split": "train",
+      "path": "/root/autodl-tmp/OurMamba/datasets_M3FD/images/train/00000.png",
+      "mode": "RGB",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "split": "train",
+      "path": "/root/autodl-tmp/OurMamba/datasets_M3FD/images/train/00002.png",
+      "mode": "RGB",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "split": "train",
+      "path": "/root/autodl-tmp/OurMamba/datasets_M3FD/images/train/00003.png",
+      "mode": "RGB",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "split": "val",
+      "path": "/root/autodl-tmp/OurMamba/datasets_M3FD/images/test/00001.png",
+      "mode": "RGB",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "split": "val",
+      "path": "/root/autodl-tmp/OurMamba/datasets_M3FD/images/test/00004.png",
+      "mode": "RGB",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "split": "val",
+      "path": "/root/autodl-tmp/OurMamba/datasets_M3FD/images/test/00005.png",
+      "mode": "RGB",
+      "size": [
+        1024,
+        768
+      ]
+    }
+  ],
+  "modality": "visible requested; script does not determine sensor modality"
+}

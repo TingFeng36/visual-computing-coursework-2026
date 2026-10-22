@@ -1,0 +1,100 @@
+{
+  "schema": "course.external-assets.v1",
+  "repository": "TingFeng36/visual-computing-coursework-2026",
+  "release_tag": "course-20261022-v1",
+  "release_url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/tag/course-20261022-v1",
+  "publication_status": "published_and_verified",
+  "assets": [
+    {
+      "key": "A",
+      "name": "A_coco2017_dinov2_best.pth",
+      "bytes": 122064182,
+      "sha256": "727ee4a43b7c50be77791227fcf31be8e7ea53ee2da205f0b7a7aa0be9f7c032",
+      "kind": "file",
+      "target": "checkpoints/A/best_model.pth",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/A_coco2017_dinov2_best.pth",
+      "github_digest": "sha256:727ee4a43b7c50be77791227fcf31be8e7ea53ee2da205f0b7a7aa0be9f7c032"
+    },
+    {
+      "key": "B",
+      "name": "B_coco80_5k_dinov2_best.pth",
+      "bytes": 122064182,
+      "sha256": "d0111dd928ac3324d135c86c3d9d1de45f890fdb4e9b299fc5839072b8d4f141",
+      "kind": "file",
+      "target": "checkpoints/B/best_model.pth",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/B_coco80_5k_dinov2_best.pth",
+      "github_digest": "sha256:d0111dd928ac3324d135c86c3d9d1de45f890fdb4e9b299fc5839072b8d4f141"
+    },
+    {
+      "key": "C",
+      "name": "C_coco20_5k_dinov2_best.pth",
+      "bytes": 121055926,
+      "sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+      "kind": "file",
+      "target": "checkpoints/C/best_model.pth",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/C_coco20_5k_dinov2_best.pth",
+      "github_digest": "sha256:cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18"
+    },
+    {
+      "key": "D",
+      "name": "D_coco20_5k_satr_backbone_best.pth",
+      "bytes": 38609698,
+      "sha256": "383623a3fc9b64a94a5440de477312be7c9875b15d1148ef9d457fe093dc7448",
+      "kind": "file",
+      "target": "checkpoints/D/best_model.pth",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/D_coco20_5k_satr_backbone_best.pth",
+      "github_digest": "sha256:383623a3fc9b64a94a5440de477312be7c9875b15d1148ef9d457fe093dc7448"
+    },
+    {
+      "key": "E",
+      "name": "E_m3fd_dinov2_best.pth",
+      "bytes": 122062774,
+      "sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+      "kind": "file",
+      "target": "checkpoints/E/best_model.pth",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/E_m3fd_dinov2_best.pth",
+      "github_digest": "sha256:9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e"
+    },
+    {
+      "key": "F",
+      "name": "F_m3fd_satr_backbone_best.pth",
+      "bytes": 39616546,
+      "sha256": "493adc544be0fda736163bfa90f24501b65d380e5a44055eca682d5b70228f35",
+      "kind": "file",
+      "target": "checkpoints/best_model.pth",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/F_m3fd_satr_backbone_best.pth",
+      "github_digest": "sha256:493adc544be0fda736163bfa90f24501b65d380e5a44055eca682d5b70228f35"
+    },
+    {
+      "key": "annotations",
+      "name": "course_fixed_annotations.zip",
+      "bytes": 37031947,
+      "sha256": "ce9674dde7b4c891f0dd10e7957b15c0cde495c45ca4823e6f56caf4a8b5e5f9",
+      "kind": "zip",
+      "target": ".",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/course_fixed_annotations.zip",
+      "github_digest": "sha256:ce9674dde7b4c891f0dd10e7957b15c0cde495c45ca4823e6f56caf4a8b5e5f9"
+    },
+    {
+      "key": "predictions",
+      "name": "course_full_predictions.zip",
+      "bytes": 230770753,
+      "sha256": "573196eab977c1d7fbd5ed7c3f9ac2018a6d0fb77f303c68975cf5fb083ce18a",
+      "kind": "zip",
+      "target": ".",
+      "url": "https://github.com/TingFeng36/visual-computing-coursework-2026/releases/download/course-20261022-v1/course_full_predictions.zip",
+      "github_digest": "sha256:573196eab977c1d7fbd5ed7c3f9ac2018a6d0fb77f303c68975cf5fb083ce18a"
+    },
+    {
+      "key": "initialization",
+      "name": "rf-detr-nano.pth",
+      "kind": "file",
+      "target": "checkpoints/initialization/rf-detr-nano.pth",
+      "bytes": 366287238,
+      "sha256": "d8d6b9ee57d4d0ed2b1f305163624712a0532cb7bce0c747317984fc5457440d",
+      "url": "https://storage.googleapis.com/rfdetr/nano_coco/checkpoint_best_regular.pth"
+    }
+  ],
+  "verification_date": "2026-10-22",
+  "SATR_source_distribution": "excluded; no SATR source, runtime, adapter, export or source download is supplied"
+}

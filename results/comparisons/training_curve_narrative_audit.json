@@ -1,0 +1,129 @@
+{
+  "sources": {
+    "RF-DETR": {
+      "conference": "ICLR 2026",
+      "url": "https://openreview.net/forum?id=qHm5GePxTh"
+    },
+    "M3FD": {
+      "conference": "CVPR 2022",
+      "paper": "Target-Aware Dual Adversarial Learning and a Multi-Scenario Multi-Modality Benchmark To Fuse Infrared and Visible for Object Detection",
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_Target-Aware_Dual_Adversarial_Learning_and_a_Multi-Scenario_Multi-Modality_Benchmark_To_CVPR_2022_paper.html"
+    }
+  },
+  "group_curves": {
+    "A": {
+      "log_sha256": "402a8ade9580a8a8611f4d56e8ad79babc8afcc10e05b59f270a9dd0ad321437",
+      "epochs": 20,
+      "best_EMA_epoch_1based": 8,
+      "first_EMA_AP": 0.4821288281311266,
+      "best_EMA_AP": 0.48256700739424,
+      "last_EMA_AP": 0.4779825202935871,
+      "first_train_loss": 3.7696204272086744,
+      "last_train_loss": 3.6156245565437004,
+      "learning_rate_transitions": [
+        {
+          "epoch_1based": 1,
+          "train_lr": 1.0000000000000546e-05
+        }
+      ]
+    },
+    "B": {
+      "log_sha256": "eeb69774de4a74a70e8f94bb53381d658be201fb224d168322e7dca0f7efec01",
+      "epochs": 20,
+      "best_EMA_epoch_1based": 1,
+      "first_EMA_AP": 0.48273763089307337,
+      "best_EMA_AP": 0.48273763089307337,
+      "last_EMA_AP": 0.4731992816865277,
+      "first_train_loss": 3.7544814256521373,
+      "last_train_loss": 3.3571712302091794,
+      "learning_rate_transitions": [
+        {
+          "epoch_1based": 1,
+          "train_lr": 1.0000000000000023e-05
+        }
+      ]
+    },
+    "C": {
+      "log_sha256": "0fa46d9e9485f5a302725c097ee5456e3e619fb3c5837c528ac18396fc82af6f",
+      "epochs": 20,
+      "best_EMA_epoch_1based": 2,
+      "first_EMA_AP": 0.5433596077272799,
+      "best_EMA_AP": 0.5435532829123841,
+      "last_EMA_AP": 0.5338178919822143,
+      "first_train_loss": 3.4868542414743646,
+      "last_train_loss": 2.845755032553242,
+      "learning_rate_transitions": [
+        {
+          "epoch_1based": 1,
+          "train_lr": 1.0000000000000023e-05
+        }
+      ]
+    },
+    "D": {
+      "log_sha256": "9da956ae42587da823578462da6fa2c3ceb7b749623c3d47882c77e240a1d121",
+      "epochs": 20,
+      "best_EMA_epoch_1based": 20,
+      "first_EMA_AP": 6.573838831360742e-05,
+      "best_EMA_AP": 0.006421427173905617,
+      "last_EMA_AP": 0.006421427173905617,
+      "first_train_loss": 11.16543909143179,
+      "last_train_loss": 7.194056345102115,
+      "learning_rate_transitions": [
+        {
+          "epoch_1based": 1,
+          "train_lr": 1.0000000000000023e-05
+        }
+      ]
+    },
+    "E": {
+      "log_sha256": "55ee4820f57346aafd4ec790ff9be423f5385733fd1a371f143d496f86eed1fe",
+      "epochs": 100,
+      "best_EMA_epoch_1based": 91,
+      "first_EMA_AP": 0.3142940483958366,
+      "best_EMA_AP": 0.4929542531571204,
+      "last_EMA_AP": 0.4927165173223947,
+      "first_train_loss": 4.492435841159966,
+      "last_train_loss": 2.6088069809302117,
+      "learning_rate_transitions": [
+        {
+          "epoch_1based": 1,
+          "train_lr": 9.999999999999982e-05
+        },
+        {
+          "epoch_1based": 81,
+          "train_lr": 6.427480916030524e-05
+        },
+        {
+          "epoch_1based": 82,
+          "train_lr": 1.0000000000000021e-05
+        }
+      ]
+    },
+    "F": {
+      "log_sha256": "8282323a221d5c843d552612ecfc5101cea38503fab20ebe90f1a56e9b553fe1",
+      "epochs": 100,
+      "best_EMA_epoch_1based": 98,
+      "first_EMA_AP": 0.024666219785776967,
+      "best_EMA_AP": 0.3145029025975029,
+      "last_EMA_AP": 0.31390968143516235,
+      "first_train_loss": 7.985974078870002,
+      "last_train_loss": 4.308008139370052,
+      "learning_rate_transitions": [
+        {
+          "epoch_1based": 1,
+          "train_lr": 9.999999999999982e-05
+        },
+        {
+          "epoch_1based": 81,
+          "train_lr": 6.427480916030524e-05
+        },
+        {
+          "epoch_1based": 82,
+          "train_lr": 1.0000000000000021e-05
+        }
+      ]
+    }
+  },
+  "interpretation": "A/B/C: COCO-pretrained aligned model; D: changed backbone/projector plus cross-domain transfer; E: COCO to M3FD domain adaptation with DINOv2; F: M3FD backbone with new RF-DETR interface; budgets differ across tasks.",
+  "script_seconds": 600
+}

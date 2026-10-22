@@ -1,0 +1,38 @@
+{
+  "split": "valid",
+  "independent_test": false,
+  "dataset_file": "roboflow",
+  "full_coco2017": null,
+  "dataset_annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07",
+  "weights_sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+  "resolution": 384,
+  "AP50_95": 0.492992577707236,
+  "AP50": 0.7822654300031289,
+  "AP75": 0.5025619018497192,
+  "AP_small": 0.19043940238788212,
+  "AP_medium": 0.5400315694299835,
+  "AP_large": 0.8183101032654224,
+  "AR_100": 0.5691343461313082,
+  "COCO_stats": [
+    0.492992577707236,
+    0.7822654300031289,
+    0.5025619018497192,
+    0.19043940238788212,
+    0.5400315694299835,
+    0.8183101032654224,
+    0.31321777299218956,
+    0.5357780418104023,
+    0.5691343461313082,
+    0.3075173309837388,
+    0.6262044707298061,
+    0.8574418492930557
+  ],
+  "eval_precision": "float32",
+  "upstream": {
+    "repository": "https://github.com/roboflow/rf-detr",
+    "tag": "1.3.0",
+    "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+    "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+  },
+  "gpu": "NVIDIA GeForce RTX 2080 Ti"
+}

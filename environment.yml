@@ -1,0 +1,7 @@
+name: course-rfdetr-baseline
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+# GPU wheels and Python packages: follow docs/复现说明.md after activation.

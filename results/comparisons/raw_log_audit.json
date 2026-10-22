@@ -1,0 +1,3049 @@
+{
+  "source_archive": "C:\\Users\\24509\\Desktop\\course_20261020_v1\\analysis.zip",
+  "source_kind": "original user-provided analysis.zip",
+  "rounding": "AP50_95 and AP50 in [0,1], display .3f; differences computed before rounding",
+  "groups": {
+    "A": {
+      "log_sha256": "402a8ade9580a8a8611f4d56e8ad79babc8afcc10e05b59f270a9dd0ad321437",
+      "namespace_line": 12,
+      "namespace": {
+        "num_classes": 90,
+        "grad_accum_steps": 8,
+        "amp": false,
+        "lr": 1e-05,
+        "lr_encoder": 1.5e-05,
+        "batch_size": 2,
+        "weight_decay": 0.0001,
+        "epochs": 20,
+        "lr_drop": 20,
+        "clip_max_norm": 0.1,
+        "lr_vit_layer_decay": 0.8,
+        "lr_component_decay": 0.7,
+        "do_benchmark": false,
+        "dropout": 0,
+        "drop_path": 0.0,
+        "drop_mode": "standard",
+        "drop_schedule": "constant",
+        "cutoff_epoch": 0,
+        "pretrained_encoder": null,
+        "pretrain_weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+        "pretrain_exclude_keys": null,
+        "pretrain_keys_modify_to_load": null,
+        "pretrained_distiller": null,
+        "encoder": "dinov2_windowed_small",
+        "vit_encoder_num_layers": 12,
+        "window_block_indexes": null,
+        "position_embedding": "sine",
+        "out_feature_indexes": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "freeze_encoder": false,
+        "layer_norm": true,
+        "rms_norm": false,
+        "backbone_lora": false,
+        "force_no_pretrain": false,
+        "dec_layers": 2,
+        "dim_feedforward": 2048,
+        "hidden_dim": 256,
+        "sa_nheads": 8,
+        "ca_nheads": 16,
+        "num_queries": 300,
+        "group_detr": 13,
+        "two_stage": true,
+        "projector_scale": [
+          "P4"
+        ],
+        "lite_refpoint_refine": true,
+        "num_select": 300,
+        "dec_n_points": 2,
+        "decoder_norm": "LN",
+        "bbox_reparam": true,
+        "freeze_batch_norm": false,
+        "set_cost_class": 2,
+        "set_cost_bbox": 5,
+        "set_cost_giou": 2,
+        "cls_loss_coef": 1.0,
+        "bbox_loss_coef": 5,
+        "giou_loss_coef": 2,
+        "focal_alpha": 0.25,
+        "aux_loss": true,
+        "sum_group_losses": false,
+        "use_varifocal_loss": false,
+        "use_position_supervised_loss": false,
+        "ia_bce_loss": true,
+        "dataset_file": "coco",
+        "coco_path": "/autodl-fs/data/datasets/coco2017",
+        "dataset_dir": "/autodl-fs/data/datasets/coco2017",
+        "square_resize_div_64": true,
+        "output_dir": "/autodl-fs/data/rfdetr_runs/coco2017_baseline_v1",
+        "dont_save_weights": false,
+        "checkpoint_interval": 10,
+        "seed": 0,
+        "resume": "",
+        "start_epoch": 0,
+        "eval": false,
+        "use_ema": true,
+        "ema_decay": 0.993,
+        "ema_tau": 100,
+        "num_workers": 4,
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "sync_bn": true,
+        "fp16_eval": false,
+        "encoder_only": false,
+        "backbone_only": false,
+        "resolution": 384,
+        "use_cls_token": false,
+        "multi_scale": false,
+        "expanded_scales": false,
+        "do_random_resize_via_padding": false,
+        "warmup_epochs": 0.0,
+        "lr_scheduler": "step",
+        "lr_min_factor": 0.0,
+        "early_stopping": false,
+        "early_stopping_patience": 10,
+        "early_stopping_min_delta": 0.001,
+        "early_stopping_use_ema": false,
+        "gradient_checkpointing": true,
+        "patch_size": 16,
+        "num_windows": 2,
+        "positional_encoding_size": 24,
+        "mask_downsample_ratio": 4,
+        "tensorboard": true,
+        "wandb": false,
+        "project": null,
+        "run": null,
+        "class_names": {
+          "1": "person",
+          "2": "bicycle",
+          "3": "car",
+          "4": "motorcycle",
+          "5": "airplane",
+          "6": "bus",
+          "7": "train",
+          "8": "truck",
+          "9": "boat",
+          "10": "traffic light",
+          "11": "fire hydrant",
+          "13": "stop sign",
+          "14": "parking meter",
+          "15": "bench",
+          "16": "bird",
+          "17": "cat",
+          "18": "dog",
+          "19": "horse",
+          "20": "sheep",
+          "21": "cow",
+          "22": "elephant",
+          "23": "bear",
+          "24": "zebra",
+          "25": "giraffe",
+          "27": "backpack",
+          "28": "umbrella",
+          "31": "handbag",
+          "32": "tie",
+          "33": "suitcase",
+          "34": "frisbee",
+          "35": "skis",
+          "36": "snowboard",
+          "37": "sports ball",
+          "38": "kite",
+          "39": "baseball bat",
+          "40": "baseball glove",
+          "41": "skateboard",
+          "42": "surfboard",
+          "43": "tennis racket",
+          "44": "bottle",
+          "46": "wine glass",
+          "47": "cup",
+          "48": "fork",
+          "49": "knife",
+          "50": "spoon",
+          "51": "bowl",
+          "52": "banana",
+          "53": "apple",
+          "54": "sandwich",
+          "55": "orange",
+          "56": "broccoli",
+          "57": "carrot",
+          "58": "hot dog",
+          "59": "pizza",
+          "60": "donut",
+          "61": "cake",
+          "62": "chair",
+          "63": "couch",
+          "64": "potted plant",
+          "65": "bed",
+          "67": "dining table",
+          "70": "toilet",
+          "72": "tv",
+          "73": "laptop",
+          "74": "mouse",
+          "75": "remote",
+          "76": "keyboard",
+          "77": "cell phone",
+          "78": "microwave",
+          "79": "oven",
+          "80": "toaster",
+          "81": "sink",
+          "82": "refrigerator",
+          "84": "book",
+          "85": "clock",
+          "86": "vase",
+          "87": "scissors",
+          "88": "teddy bear",
+          "89": "hair drier",
+          "90": "toothbrush"
+        },
+        "run_test": false,
+        "segmentation_head": false,
+        "distributed": false
+      },
+      "epoch_count": 20,
+      "epochs_contiguous": true,
+      "config_fields": {
+        "lr": {
+          "raw_log": 1e-05,
+          "resolved_config": 1e-05,
+          "passed": true
+        },
+        "lr_encoder": {
+          "raw_log": 1.5e-05,
+          "resolved_config": 1.5e-05,
+          "passed": true
+        },
+        "batch_size": {
+          "raw_log": 2,
+          "resolved_config": 2,
+          "passed": true
+        },
+        "grad_accum_steps": {
+          "raw_log": 8,
+          "resolved_config": 8,
+          "passed": true
+        },
+        "epochs": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "lr_drop": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "weight_decay": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "num_workers": {
+          "raw_log": 4,
+          "resolved_config": 4,
+          "passed": true
+        },
+        "use_ema": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "multi_scale": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "expanded_scales": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "seed": {
+          "raw_log": 0,
+          "resolved_config": 0,
+          "passed": true
+        },
+        "group_detr": {
+          "raw_log": 13,
+          "resolved_config": 13,
+          "passed": true
+        },
+        "run_test": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "resolution": {
+          "raw_log": 384,
+          "resolved_config": 384,
+          "passed": true
+        },
+        "gradient_checkpointing": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "amp": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        }
+      },
+      "parameters": 30467298,
+      "best_training_record": {
+        "log_txt_line": 8,
+        "epoch_1based": 8,
+        "field": "ema_test_coco_eval_bbox",
+        "AP50_95": 0.48256700739424,
+        "AP50": 0.673668531804781
+      },
+      "final_validation": {
+        "AP50_95": 0.4825505532436856,
+        "AP50": 0.6736437612555023,
+        "weights_sha256": "727ee4a43b7c50be77791227fcf31be8e7ea53ee2da205f0b7a7aa0be9f7c032",
+        "eval_precision": "float32"
+      },
+      "final_val_log_AP": "0.483",
+      "final_val_log_AP50": "0.674",
+      "display": {
+        "AP50_95": "0.483",
+        "AP50": "0.674"
+      },
+      "reload_minus_best_log_AP": -1.645415055440136e-05,
+      "training_time_raw": "2 days, 0:00:11",
+      "training_wall_hours": 48.003055555555555,
+      "first_train_loss": 3.7696204272086744,
+      "last_train_loss": 3.6156245565437004
+    },
+    "B": {
+      "log_sha256": "eeb69774de4a74a70e8f94bb53381d658be201fb224d168322e7dca0f7efec01",
+      "namespace_line": 31,
+      "namespace": {
+        "num_classes": 90,
+        "grad_accum_steps": 8,
+        "amp": false,
+        "lr": 1e-05,
+        "lr_encoder": 1.5e-05,
+        "batch_size": 2,
+        "weight_decay": 0.0001,
+        "epochs": 20,
+        "lr_drop": 20,
+        "clip_max_norm": 0.1,
+        "lr_vit_layer_decay": 0.8,
+        "lr_component_decay": 0.7,
+        "do_benchmark": false,
+        "dropout": 0,
+        "drop_path": 0.0,
+        "drop_mode": "standard",
+        "drop_schedule": "constant",
+        "cutoff_epoch": 0,
+        "pretrained_encoder": null,
+        "pretrain_weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+        "pretrain_exclude_keys": null,
+        "pretrain_keys_modify_to_load": null,
+        "pretrained_distiller": null,
+        "encoder": "dinov2_windowed_small",
+        "vit_encoder_num_layers": 12,
+        "window_block_indexes": null,
+        "position_embedding": "sine",
+        "out_feature_indexes": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "freeze_encoder": false,
+        "layer_norm": true,
+        "rms_norm": false,
+        "backbone_lora": false,
+        "force_no_pretrain": false,
+        "dec_layers": 2,
+        "dim_feedforward": 2048,
+        "hidden_dim": 256,
+        "sa_nheads": 8,
+        "ca_nheads": 16,
+        "num_queries": 300,
+        "group_detr": 13,
+        "two_stage": true,
+        "projector_scale": [
+          "P4"
+        ],
+        "lite_refpoint_refine": true,
+        "num_select": 300,
+        "dec_n_points": 2,
+        "decoder_norm": "LN",
+        "bbox_reparam": true,
+        "freeze_batch_norm": false,
+        "set_cost_class": 2,
+        "set_cost_bbox": 5,
+        "set_cost_giou": 2,
+        "cls_loss_coef": 1.0,
+        "bbox_loss_coef": 5,
+        "giou_loss_coef": 2,
+        "focal_alpha": 0.25,
+        "aux_loss": true,
+        "sum_group_losses": false,
+        "use_varifocal_loss": false,
+        "use_position_supervised_loss": false,
+        "ia_bce_loss": true,
+        "dataset_file": "coco",
+        "coco_path": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k",
+        "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k",
+        "square_resize_div_64": true,
+        "output_dir": "/autodl-fs/data/rfdetr_runs/coco80_5k_seed0",
+        "dont_save_weights": false,
+        "checkpoint_interval": 10,
+        "seed": 0,
+        "resume": "",
+        "start_epoch": 0,
+        "eval": false,
+        "use_ema": true,
+        "ema_decay": 0.993,
+        "ema_tau": 100,
+        "num_workers": 4,
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "sync_bn": true,
+        "fp16_eval": false,
+        "encoder_only": false,
+        "backbone_only": false,
+        "resolution": 384,
+        "use_cls_token": false,
+        "multi_scale": false,
+        "expanded_scales": false,
+        "do_random_resize_via_padding": false,
+        "warmup_epochs": 0.0,
+        "lr_scheduler": "step",
+        "lr_min_factor": 0.0,
+        "early_stopping": false,
+        "early_stopping_patience": 10,
+        "early_stopping_min_delta": 0.001,
+        "early_stopping_use_ema": false,
+        "gradient_checkpointing": true,
+        "patch_size": 16,
+        "num_windows": 2,
+        "positional_encoding_size": 24,
+        "mask_downsample_ratio": 4,
+        "tensorboard": true,
+        "wandb": false,
+        "project": null,
+        "run": null,
+        "class_names": {
+          "1": "person",
+          "2": "bicycle",
+          "3": "car",
+          "4": "motorcycle",
+          "5": "airplane",
+          "6": "bus",
+          "7": "train",
+          "8": "truck",
+          "9": "boat",
+          "10": "traffic light",
+          "11": "fire hydrant",
+          "13": "stop sign",
+          "14": "parking meter",
+          "15": "bench",
+          "16": "bird",
+          "17": "cat",
+          "18": "dog",
+          "19": "horse",
+          "20": "sheep",
+          "21": "cow",
+          "22": "elephant",
+          "23": "bear",
+          "24": "zebra",
+          "25": "giraffe",
+          "27": "backpack",
+          "28": "umbrella",
+          "31": "handbag",
+          "32": "tie",
+          "33": "suitcase",
+          "34": "frisbee",
+          "35": "skis",
+          "36": "snowboard",
+          "37": "sports ball",
+          "38": "kite",
+          "39": "baseball bat",
+          "40": "baseball glove",
+          "41": "skateboard",
+          "42": "surfboard",
+          "43": "tennis racket",
+          "44": "bottle",
+          "46": "wine glass",
+          "47": "cup",
+          "48": "fork",
+          "49": "knife",
+          "50": "spoon",
+          "51": "bowl",
+          "52": "banana",
+          "53": "apple",
+          "54": "sandwich",
+          "55": "orange",
+          "56": "broccoli",
+          "57": "carrot",
+          "58": "hot dog",
+          "59": "pizza",
+          "60": "donut",
+          "61": "cake",
+          "62": "chair",
+          "63": "couch",
+          "64": "potted plant",
+          "65": "bed",
+          "67": "dining table",
+          "70": "toilet",
+          "72": "tv",
+          "73": "laptop",
+          "74": "mouse",
+          "75": "remote",
+          "76": "keyboard",
+          "77": "cell phone",
+          "78": "microwave",
+          "79": "oven",
+          "80": "toaster",
+          "81": "sink",
+          "82": "refrigerator",
+          "84": "book",
+          "85": "clock",
+          "86": "vase",
+          "87": "scissors",
+          "88": "teddy bear",
+          "89": "hair drier",
+          "90": "toothbrush"
+        },
+        "run_test": false,
+        "segmentation_head": false,
+        "distributed": false
+      },
+      "epoch_count": 20,
+      "epochs_contiguous": true,
+      "config_fields": {
+        "lr": {
+          "raw_log": 1e-05,
+          "resolved_config": 1e-05,
+          "passed": true
+        },
+        "lr_encoder": {
+          "raw_log": 1.5e-05,
+          "resolved_config": 1.5e-05,
+          "passed": true
+        },
+        "batch_size": {
+          "raw_log": 2,
+          "resolved_config": 2,
+          "passed": true
+        },
+        "grad_accum_steps": {
+          "raw_log": 8,
+          "resolved_config": 8,
+          "passed": true
+        },
+        "epochs": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "lr_drop": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "weight_decay": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "num_workers": {
+          "raw_log": 4,
+          "resolved_config": 4,
+          "passed": true
+        },
+        "use_ema": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "multi_scale": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "expanded_scales": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "seed": {
+          "raw_log": 0,
+          "resolved_config": 0,
+          "passed": true
+        },
+        "group_detr": {
+          "raw_log": 13,
+          "resolved_config": 13,
+          "passed": true
+        },
+        "run_test": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "resolution": {
+          "raw_log": 384,
+          "resolved_config": 384,
+          "passed": true
+        },
+        "gradient_checkpointing": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "amp": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        }
+      },
+      "parameters": 30467298,
+      "best_training_record": {
+        "log_txt_line": 1,
+        "epoch_1based": 1,
+        "field": "ema_test_coco_eval_bbox",
+        "AP50_95": 0.48273763089307337,
+        "AP50": 0.6731144910066399
+      },
+      "final_validation": {
+        "AP50_95": 0.4827386728704059,
+        "AP50": 0.6731164978184379,
+        "weights_sha256": "d0111dd928ac3324d135c86c3d9d1de45f890fdb4e9b299fc5839072b8d4f141",
+        "eval_precision": "float32"
+      },
+      "final_val_log_AP": "0.483",
+      "final_val_log_AP50": "0.673",
+      "display": {
+        "AP50_95": "0.483",
+        "AP50": "0.673"
+      },
+      "reload_minus_best_log_AP": 1.0419773325276438e-06,
+      "training_time_raw": "4:43:06",
+      "training_wall_hours": 4.718333333333334,
+      "first_train_loss": 3.7544814256521373,
+      "last_train_loss": 3.3571712302091794
+    },
+    "C": {
+      "log_sha256": "0fa46d9e9485f5a302725c097ee5456e3e619fb3c5837c528ac18396fc82af6f",
+      "namespace_line": 14,
+      "namespace": {
+        "num_classes": 20,
+        "grad_accum_steps": 8,
+        "amp": false,
+        "lr": 1e-05,
+        "lr_encoder": 1.5e-05,
+        "batch_size": 2,
+        "weight_decay": 0.0001,
+        "epochs": 20,
+        "lr_drop": 20,
+        "clip_max_norm": 0.1,
+        "lr_vit_layer_decay": 0.8,
+        "lr_component_decay": 0.7,
+        "do_benchmark": false,
+        "dropout": 0,
+        "drop_path": 0.0,
+        "drop_mode": "standard",
+        "drop_schedule": "constant",
+        "cutoff_epoch": 0,
+        "pretrained_encoder": null,
+        "pretrain_weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+        "pretrain_exclude_keys": null,
+        "pretrain_keys_modify_to_load": null,
+        "pretrained_distiller": null,
+        "encoder": "dinov2_windowed_small",
+        "vit_encoder_num_layers": 12,
+        "window_block_indexes": null,
+        "position_embedding": "sine",
+        "out_feature_indexes": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "freeze_encoder": false,
+        "layer_norm": true,
+        "rms_norm": false,
+        "backbone_lora": false,
+        "force_no_pretrain": false,
+        "dec_layers": 2,
+        "dim_feedforward": 2048,
+        "hidden_dim": 256,
+        "sa_nheads": 8,
+        "ca_nheads": 16,
+        "num_queries": 300,
+        "group_detr": 13,
+        "two_stage": true,
+        "projector_scale": [
+          "P4"
+        ],
+        "lite_refpoint_refine": true,
+        "num_select": 300,
+        "dec_n_points": 2,
+        "decoder_norm": "LN",
+        "bbox_reparam": true,
+        "freeze_batch_norm": false,
+        "set_cost_class": 2,
+        "set_cost_bbox": 5,
+        "set_cost_giou": 2,
+        "cls_loss_coef": 1.0,
+        "bbox_loss_coef": 5,
+        "giou_loss_coef": 2,
+        "focal_alpha": 0.25,
+        "aux_loss": true,
+        "sum_group_losses": false,
+        "use_varifocal_loss": false,
+        "use_position_supervised_loss": false,
+        "ia_bce_loss": true,
+        "dataset_file": "roboflow",
+        "coco_path": null,
+        "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k",
+        "square_resize_div_64": true,
+        "output_dir": "/autodl-fs/data/rfdetr_runs/coco20_voc_5k_seed0",
+        "dont_save_weights": false,
+        "checkpoint_interval": 10,
+        "seed": 0,
+        "resume": "",
+        "start_epoch": 0,
+        "eval": false,
+        "use_ema": true,
+        "ema_decay": 0.993,
+        "ema_tau": 100,
+        "num_workers": 4,
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "sync_bn": true,
+        "fp16_eval": false,
+        "encoder_only": false,
+        "backbone_only": false,
+        "resolution": 384,
+        "use_cls_token": false,
+        "multi_scale": false,
+        "expanded_scales": false,
+        "do_random_resize_via_padding": false,
+        "warmup_epochs": 0.0,
+        "lr_scheduler": "step",
+        "lr_min_factor": 0.0,
+        "early_stopping": false,
+        "early_stopping_patience": 10,
+        "early_stopping_min_delta": 0.001,
+        "early_stopping_use_ema": false,
+        "gradient_checkpointing": true,
+        "patch_size": 16,
+        "num_windows": 2,
+        "positional_encoding_size": 24,
+        "mask_downsample_ratio": 4,
+        "tensorboard": true,
+        "wandb": false,
+        "project": null,
+        "run": null,
+        "class_names": [
+          "person",
+          "bicycle",
+          "car",
+          "motorcycle",
+          "airplane",
+          "bus",
+          "train",
+          "boat",
+          "bird",
+          "cat",
+          "dog",
+          "horse",
+          "sheep",
+          "cow",
+          "bottle",
+          "chair",
+          "couch",
+          "potted plant",
+          "dining table",
+          "tv"
+        ],
+        "run_test": false,
+        "segmentation_head": false,
+        "distributed": false
+      },
+      "epoch_count": 20,
+      "epochs_contiguous": true,
+      "config_fields": {
+        "lr": {
+          "raw_log": 1e-05,
+          "resolved_config": 1e-05,
+          "passed": true
+        },
+        "lr_encoder": {
+          "raw_log": 1.5e-05,
+          "resolved_config": 1.5e-05,
+          "passed": true
+        },
+        "batch_size": {
+          "raw_log": 2,
+          "resolved_config": 2,
+          "passed": true
+        },
+        "grad_accum_steps": {
+          "raw_log": 8,
+          "resolved_config": 8,
+          "passed": true
+        },
+        "epochs": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "lr_drop": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "weight_decay": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "num_workers": {
+          "raw_log": 4,
+          "resolved_config": 4,
+          "passed": true
+        },
+        "use_ema": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "multi_scale": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "expanded_scales": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "seed": {
+          "raw_log": 0,
+          "resolved_config": 0,
+          "passed": true
+        },
+        "group_detr": {
+          "raw_log": 13,
+          "resolved_config": 13,
+          "passed": true
+        },
+        "run_test": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "resolution": {
+          "raw_log": 384,
+          "resolved_config": 384,
+          "passed": true
+        },
+        "gradient_checkpointing": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "amp": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        }
+      },
+      "parameters": 30215438,
+      "best_training_record": {
+        "log_txt_line": 2,
+        "epoch_1based": 2,
+        "field": "ema_test_coco_eval_bbox",
+        "AP50_95": 0.5435532829123841,
+        "AP50": 0.7483518741914414
+      },
+      "final_validation": {
+        "AP50_95": 0.5435514820392302,
+        "AP50": 0.7483498984791926,
+        "weights_sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+        "eval_precision": "float32"
+      },
+      "final_val_log_AP": "0.544",
+      "final_val_log_AP50": "0.748",
+      "display": {
+        "AP50_95": "0.544",
+        "AP50": "0.748"
+      },
+      "reload_minus_best_log_AP": -1.8008731539342904e-06,
+      "training_time_raw": "4:07:34",
+      "training_wall_hours": 4.126111111111111,
+      "first_train_loss": 3.4868542414743646,
+      "last_train_loss": 2.845755032553242
+    },
+    "D": {
+      "log_sha256": "9da956ae42587da823578462da6fa2c3ceb7b749623c3d47882c77e240a1d121",
+      "namespace_line": 24,
+      "namespace": {
+        "num_classes": 20,
+        "grad_accum_steps": 8,
+        "amp": false,
+        "lr": 1e-05,
+        "lr_encoder": 1.5e-05,
+        "batch_size": 2,
+        "weight_decay": 0.0001,
+        "epochs": 20,
+        "lr_drop": 20,
+        "clip_max_norm": 0.1,
+        "lr_vit_layer_decay": 0.8,
+        "lr_component_decay": 0.7,
+        "do_benchmark": false,
+        "dropout": 0,
+        "drop_path": 0.0,
+        "drop_mode": "standard",
+        "drop_schedule": "constant",
+        "cutoff_epoch": 0,
+        "pretrained_encoder": null,
+        "pretrain_weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+        "pretrain_exclude_keys": null,
+        "pretrain_keys_modify_to_load": null,
+        "pretrained_distiller": null,
+        "encoder": "dinov2_windowed_small",
+        "vit_encoder_num_layers": 12,
+        "window_block_indexes": null,
+        "position_embedding": "sine",
+        "out_feature_indexes": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "freeze_encoder": false,
+        "layer_norm": true,
+        "rms_norm": false,
+        "backbone_lora": false,
+        "force_no_pretrain": false,
+        "dec_layers": 2,
+        "dim_feedforward": 2048,
+        "hidden_dim": 256,
+        "sa_nheads": 8,
+        "ca_nheads": 16,
+        "num_queries": 300,
+        "group_detr": 13,
+        "two_stage": true,
+        "projector_scale": [
+          "P4"
+        ],
+        "lite_refpoint_refine": true,
+        "num_select": 300,
+        "dec_n_points": 2,
+        "decoder_norm": "LN",
+        "bbox_reparam": true,
+        "freeze_batch_norm": false,
+        "set_cost_class": 2,
+        "set_cost_bbox": 5,
+        "set_cost_giou": 2,
+        "cls_loss_coef": 1.0,
+        "bbox_loss_coef": 5,
+        "giou_loss_coef": 2,
+        "focal_alpha": 0.25,
+        "aux_loss": true,
+        "sum_group_losses": false,
+        "use_varifocal_loss": false,
+        "use_position_supervised_loss": false,
+        "ia_bce_loss": true,
+        "dataset_file": "roboflow",
+        "coco_path": null,
+        "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k",
+        "square_resize_div_64": true,
+        "output_dir": "/autodl-fs/data/rfdetr_runs/py312_formal_v1/coco20_voc_5k_satr_seed0",
+        "dont_save_weights": false,
+        "checkpoint_interval": 10,
+        "seed": 0,
+        "resume": "",
+        "start_epoch": 0,
+        "eval": false,
+        "use_ema": true,
+        "ema_decay": 0.993,
+        "ema_tau": 100,
+        "num_workers": 4,
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "sync_bn": true,
+        "fp16_eval": false,
+        "encoder_only": false,
+        "backbone_only": false,
+        "resolution": 384,
+        "use_cls_token": false,
+        "multi_scale": false,
+        "expanded_scales": false,
+        "do_random_resize_via_padding": false,
+        "warmup_epochs": 0.0,
+        "lr_scheduler": "step",
+        "lr_min_factor": 0.0,
+        "early_stopping": false,
+        "early_stopping_patience": 10,
+        "early_stopping_min_delta": 0.001,
+        "early_stopping_use_ema": false,
+        "gradient_checkpointing": true,
+        "patch_size": 16,
+        "num_windows": 2,
+        "positional_encoding_size": 24,
+        "mask_downsample_ratio": 4,
+        "tensorboard": true,
+        "wandb": false,
+        "project": null,
+        "run": null,
+        "class_names": [
+          "person",
+          "bicycle",
+          "car",
+          "motorcycle",
+          "airplane",
+          "bus",
+          "train",
+          "boat",
+          "bird",
+          "cat",
+          "dog",
+          "horse",
+          "sheep",
+          "cow",
+          "bottle",
+          "chair",
+          "couch",
+          "potted plant",
+          "dining table",
+          "tv"
+        ],
+        "run_test": false,
+        "segmentation_head": false,
+        "distributed": false
+      },
+      "epoch_count": 20,
+      "epochs_contiguous": true,
+      "config_fields": {
+        "lr": {
+          "raw_log": 1e-05,
+          "resolved_config": 1e-05,
+          "passed": true
+        },
+        "lr_encoder": {
+          "raw_log": 1.5e-05,
+          "resolved_config": 1.5e-05,
+          "passed": true
+        },
+        "batch_size": {
+          "raw_log": 2,
+          "resolved_config": 2,
+          "passed": true
+        },
+        "grad_accum_steps": {
+          "raw_log": 8,
+          "resolved_config": 8,
+          "passed": true
+        },
+        "epochs": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "lr_drop": {
+          "raw_log": 20,
+          "resolved_config": 20,
+          "passed": true
+        },
+        "weight_decay": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "num_workers": {
+          "raw_log": 4,
+          "resolved_config": 4,
+          "passed": true
+        },
+        "use_ema": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "multi_scale": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "expanded_scales": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "seed": {
+          "raw_log": 0,
+          "resolved_config": 0,
+          "passed": true
+        },
+        "group_detr": {
+          "raw_log": 13,
+          "resolved_config": 13,
+          "passed": true
+        },
+        "run_test": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "resolution": {
+          "raw_log": 384,
+          "resolved_config": 384,
+          "passed": true
+        },
+        "gradient_checkpointing": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "amp": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        }
+      },
+      "parameters": 9577269,
+      "best_training_record": {
+        "log_txt_line": 20,
+        "epoch_1based": 20,
+        "field": "ema_test_coco_eval_bbox",
+        "AP50_95": 0.006421427173905617,
+        "AP50": 0.016880861436983398
+      },
+      "final_validation": {
+        "AP50_95": 0.006422170006189272,
+        "AP50": 0.01688236848549676,
+        "weights_sha256": "383623a3fc9b64a94a5440de477312be7c9875b15d1148ef9d457fe093dc7448",
+        "eval_precision": "float32"
+      },
+      "final_val_log_AP": "0.006",
+      "final_val_log_AP50": "0.017",
+      "display": {
+        "AP50_95": "0.006",
+        "AP50": "0.017"
+      },
+      "reload_minus_best_log_AP": 7.428322836549456e-07,
+      "training_time_raw": "9:37:48",
+      "training_wall_hours": 9.63,
+      "first_train_loss": 11.16543909143179,
+      "last_train_loss": 7.194056345102115
+    },
+    "E": {
+      "log_sha256": "55ee4820f57346aafd4ec790ff9be423f5385733fd1a371f143d496f86eed1fe",
+      "namespace_line": 12,
+      "namespace": {
+        "num_classes": 6,
+        "grad_accum_steps": 8,
+        "amp": false,
+        "lr": 0.0001,
+        "lr_encoder": 0.00015,
+        "batch_size": 2,
+        "weight_decay": 0.0001,
+        "epochs": 100,
+        "lr_drop": 80,
+        "clip_max_norm": 0.1,
+        "lr_vit_layer_decay": 0.8,
+        "lr_component_decay": 0.7,
+        "do_benchmark": false,
+        "dropout": 0,
+        "drop_path": 0.0,
+        "drop_mode": "standard",
+        "drop_schedule": "constant",
+        "cutoff_epoch": 0,
+        "pretrained_encoder": null,
+        "pretrain_weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+        "pretrain_exclude_keys": null,
+        "pretrain_keys_modify_to_load": null,
+        "pretrained_distiller": null,
+        "encoder": "dinov2_windowed_small",
+        "vit_encoder_num_layers": 12,
+        "window_block_indexes": null,
+        "position_embedding": "sine",
+        "out_feature_indexes": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "freeze_encoder": false,
+        "layer_norm": true,
+        "rms_norm": false,
+        "backbone_lora": false,
+        "force_no_pretrain": false,
+        "dec_layers": 2,
+        "dim_feedforward": 2048,
+        "hidden_dim": 256,
+        "sa_nheads": 8,
+        "ca_nheads": 16,
+        "num_queries": 300,
+        "group_detr": 13,
+        "two_stage": true,
+        "projector_scale": [
+          "P4"
+        ],
+        "lite_refpoint_refine": true,
+        "num_select": 300,
+        "dec_n_points": 2,
+        "decoder_norm": "LN",
+        "bbox_reparam": true,
+        "freeze_batch_norm": false,
+        "set_cost_class": 2,
+        "set_cost_bbox": 5,
+        "set_cost_giou": 2,
+        "cls_loss_coef": 1.0,
+        "bbox_loss_coef": 5,
+        "giou_loss_coef": 2,
+        "focal_alpha": 0.25,
+        "aux_loss": true,
+        "sum_group_losses": false,
+        "use_varifocal_loss": false,
+        "use_position_supervised_loss": false,
+        "ia_bce_loss": true,
+        "dataset_file": "roboflow",
+        "coco_path": null,
+        "dataset_dir": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr",
+        "square_resize_div_64": true,
+        "output_dir": "/autodl-fs/data/rfdetr_runs/m3fd_baseline_v1",
+        "dont_save_weights": false,
+        "checkpoint_interval": 10,
+        "seed": 0,
+        "resume": "",
+        "start_epoch": 0,
+        "eval": false,
+        "use_ema": true,
+        "ema_decay": 0.993,
+        "ema_tau": 100,
+        "num_workers": 4,
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "sync_bn": true,
+        "fp16_eval": false,
+        "encoder_only": false,
+        "backbone_only": false,
+        "resolution": 384,
+        "use_cls_token": false,
+        "multi_scale": false,
+        "expanded_scales": false,
+        "do_random_resize_via_padding": false,
+        "warmup_epochs": 0.0,
+        "lr_scheduler": "step",
+        "lr_min_factor": 0.0,
+        "early_stopping": false,
+        "early_stopping_patience": 10,
+        "early_stopping_min_delta": 0.001,
+        "early_stopping_use_ema": false,
+        "gradient_checkpointing": true,
+        "patch_size": 16,
+        "num_windows": 2,
+        "positional_encoding_size": 24,
+        "mask_downsample_ratio": 4,
+        "tensorboard": true,
+        "wandb": false,
+        "project": null,
+        "run": null,
+        "class_names": [
+          "People",
+          "Car",
+          "Bus",
+          "Motorcycle",
+          "Lamp",
+          "Truck"
+        ],
+        "run_test": false,
+        "segmentation_head": false,
+        "distributed": false
+      },
+      "epoch_count": 100,
+      "epochs_contiguous": true,
+      "config_fields": {
+        "lr": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "lr_encoder": {
+          "raw_log": 0.00015,
+          "resolved_config": 0.00015,
+          "passed": true
+        },
+        "batch_size": {
+          "raw_log": 2,
+          "resolved_config": 2,
+          "passed": true
+        },
+        "grad_accum_steps": {
+          "raw_log": 8,
+          "resolved_config": 8,
+          "passed": true
+        },
+        "epochs": {
+          "raw_log": 100,
+          "resolved_config": 100,
+          "passed": true
+        },
+        "lr_drop": {
+          "raw_log": 80,
+          "resolved_config": 80,
+          "passed": true
+        },
+        "weight_decay": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "num_workers": {
+          "raw_log": 4,
+          "resolved_config": 4,
+          "passed": true
+        },
+        "use_ema": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "multi_scale": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "expanded_scales": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "seed": {
+          "raw_log": 0,
+          "resolved_config": 0,
+          "passed": true
+        },
+        "group_detr": {
+          "raw_log": 13,
+          "resolved_config": 13,
+          "passed": true
+        },
+        "run_test": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "resolution": {
+          "raw_log": 384,
+          "resolved_config": 384,
+          "passed": true
+        },
+        "gradient_checkpointing": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "amp": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        }
+      },
+      "parameters": 30467298,
+      "best_training_record": {
+        "log_txt_line": 91,
+        "epoch_1based": 91,
+        "field": "ema_test_coco_eval_bbox",
+        "AP50_95": 0.4929542531571204,
+        "AP50": 0.7822782364228078
+      },
+      "final_validation": {
+        "AP50_95": 0.49299145753600815,
+        "AP50": 0.7822657925564942,
+        "weights_sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+        "eval_precision": "float32"
+      },
+      "final_val_log_AP": "0.493",
+      "final_val_log_AP50": "0.782",
+      "display": {
+        "AP50_95": "0.493",
+        "AP50": "0.782"
+      },
+      "reload_minus_best_log_AP": 3.72043788877674e-05,
+      "training_time_raw": "9:25:49",
+      "training_wall_hours": 9.430277777777778,
+      "first_train_loss": 4.492435841159966,
+      "last_train_loss": 2.6088069809302117
+    },
+    "F": {
+      "log_sha256": "8282323a221d5c843d552612ecfc5101cea38503fab20ebe90f1a56e9b553fe1",
+      "namespace_line": 23,
+      "namespace": {
+        "num_classes": 6,
+        "grad_accum_steps": 8,
+        "amp": false,
+        "lr": 0.0001,
+        "lr_encoder": 0.00015,
+        "batch_size": 2,
+        "weight_decay": 0.0001,
+        "epochs": 100,
+        "lr_drop": 80,
+        "clip_max_norm": 0.1,
+        "lr_vit_layer_decay": 0.8,
+        "lr_component_decay": 0.7,
+        "do_benchmark": false,
+        "dropout": 0,
+        "drop_path": 0.0,
+        "drop_mode": "standard",
+        "drop_schedule": "constant",
+        "cutoff_epoch": 0,
+        "pretrained_encoder": null,
+        "pretrain_weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+        "pretrain_exclude_keys": null,
+        "pretrain_keys_modify_to_load": null,
+        "pretrained_distiller": null,
+        "encoder": "dinov2_windowed_small",
+        "vit_encoder_num_layers": 12,
+        "window_block_indexes": null,
+        "position_embedding": "sine",
+        "out_feature_indexes": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "freeze_encoder": false,
+        "layer_norm": true,
+        "rms_norm": false,
+        "backbone_lora": false,
+        "force_no_pretrain": false,
+        "dec_layers": 2,
+        "dim_feedforward": 2048,
+        "hidden_dim": 256,
+        "sa_nheads": 8,
+        "ca_nheads": 16,
+        "num_queries": 300,
+        "group_detr": 13,
+        "two_stage": true,
+        "projector_scale": [
+          "P4"
+        ],
+        "lite_refpoint_refine": true,
+        "num_select": 300,
+        "dec_n_points": 2,
+        "decoder_norm": "LN",
+        "bbox_reparam": true,
+        "freeze_batch_norm": false,
+        "set_cost_class": 2,
+        "set_cost_bbox": 5,
+        "set_cost_giou": 2,
+        "cls_loss_coef": 1.0,
+        "bbox_loss_coef": 5,
+        "giou_loss_coef": 2,
+        "focal_alpha": 0.25,
+        "aux_loss": true,
+        "sum_group_losses": false,
+        "use_varifocal_loss": false,
+        "use_position_supervised_loss": false,
+        "ia_bce_loss": true,
+        "dataset_file": "roboflow",
+        "coco_path": null,
+        "dataset_dir": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr",
+        "square_resize_div_64": true,
+        "output_dir": "/autodl-fs/data/rfdetr_runs/py312_formal_v1/m3fd_satr_seed0",
+        "dont_save_weights": false,
+        "checkpoint_interval": 10,
+        "seed": 0,
+        "resume": "",
+        "start_epoch": 0,
+        "eval": false,
+        "use_ema": true,
+        "ema_decay": 0.993,
+        "ema_tau": 100,
+        "num_workers": 4,
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "sync_bn": true,
+        "fp16_eval": false,
+        "encoder_only": false,
+        "backbone_only": false,
+        "resolution": 384,
+        "use_cls_token": false,
+        "multi_scale": false,
+        "expanded_scales": false,
+        "do_random_resize_via_padding": false,
+        "warmup_epochs": 0.0,
+        "lr_scheduler": "step",
+        "lr_min_factor": 0.0,
+        "early_stopping": false,
+        "early_stopping_patience": 10,
+        "early_stopping_min_delta": 0.001,
+        "early_stopping_use_ema": false,
+        "gradient_checkpointing": true,
+        "patch_size": 16,
+        "num_windows": 2,
+        "positional_encoding_size": 24,
+        "mask_downsample_ratio": 4,
+        "tensorboard": true,
+        "wandb": false,
+        "project": null,
+        "run": null,
+        "class_names": [
+          "People",
+          "Car",
+          "Bus",
+          "Motorcycle",
+          "Lamp",
+          "Truck"
+        ],
+        "run_test": false,
+        "segmentation_head": false,
+        "distributed": false
+      },
+      "epoch_count": 100,
+      "epochs_contiguous": true,
+      "config_fields": {
+        "lr": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "lr_encoder": {
+          "raw_log": 0.00015,
+          "resolved_config": 0.00015,
+          "passed": true
+        },
+        "batch_size": {
+          "raw_log": 2,
+          "resolved_config": 2,
+          "passed": true
+        },
+        "grad_accum_steps": {
+          "raw_log": 8,
+          "resolved_config": 8,
+          "passed": true
+        },
+        "epochs": {
+          "raw_log": 100,
+          "resolved_config": 100,
+          "passed": true
+        },
+        "lr_drop": {
+          "raw_log": 80,
+          "resolved_config": 80,
+          "passed": true
+        },
+        "weight_decay": {
+          "raw_log": 0.0001,
+          "resolved_config": 0.0001,
+          "passed": true
+        },
+        "num_workers": {
+          "raw_log": 4,
+          "resolved_config": 4,
+          "passed": true
+        },
+        "use_ema": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "multi_scale": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "expanded_scales": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "seed": {
+          "raw_log": 0,
+          "resolved_config": 0,
+          "passed": true
+        },
+        "group_detr": {
+          "raw_log": 13,
+          "resolved_config": 13,
+          "passed": true
+        },
+        "run_test": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        },
+        "resolution": {
+          "raw_log": 384,
+          "resolved_config": 384,
+          "passed": true
+        },
+        "gradient_checkpointing": {
+          "raw_log": true,
+          "resolved_config": true,
+          "passed": true
+        },
+        "amp": {
+          "raw_log": false,
+          "resolved_config": false,
+          "passed": true
+        }
+      },
+      "parameters": 9829129,
+      "best_training_record": {
+        "log_txt_line": 98,
+        "epoch_1based": 98,
+        "field": "ema_test_coco_eval_bbox",
+        "AP50_95": 0.3145029025975029,
+        "AP50": 0.5609243919512136
+      },
+      "final_validation": {
+        "AP50_95": 0.3145133498878808,
+        "AP50": 0.5609337188931948,
+        "weights_sha256": "493adc544be0fda736163bfa90f24501b65d380e5a44055eca682d5b70228f35",
+        "eval_precision": "float32"
+      },
+      "final_val_log_AP": "0.315",
+      "final_val_log_AP50": "0.561",
+      "display": {
+        "AP50_95": "0.315",
+        "AP50": "0.561"
+      },
+      "reload_minus_best_log_AP": 1.0447290377912921e-05,
+      "training_time_raw": "21:13:05",
+      "training_wall_hours": 21.218055555555555,
+      "first_train_loss": 7.985974078870002,
+      "last_train_loss": 4.308008139370052
+    }
+  },
+  "source_copy_checks": [
+    {
+      "path": "logs/A/log.txt",
+      "original_member": "course_materials/logs/A/log.txt",
+      "sha256": "402a8ade9580a8a8611f4d56e8ad79babc8afcc10e05b59f270a9dd0ad321437",
+      "passed": true
+    },
+    {
+      "path": "logs/A/train.log",
+      "original_member": "course_materials/logs/A/train.log",
+      "sha256": "166dc088cd796db5bfe2d2f4575b84640d15f8fabf757d4c7bf40b260a52bfdb",
+      "passed": true
+    },
+    {
+      "path": "logs/B/log.txt",
+      "original_member": "course_materials/logs/B/log.txt",
+      "sha256": "eeb69774de4a74a70e8f94bb53381d658be201fb224d168322e7dca0f7efec01",
+      "passed": true
+    },
+    {
+      "path": "logs/B/train.log",
+      "original_member": "course_materials/logs/B/train.log",
+      "sha256": "317982777f114f9506c97f2e54375fde1b33ddef471ebdcc56b45e8831b7ef0a",
+      "passed": true
+    },
+    {
+      "path": "logs/C/log.txt",
+      "original_member": "course_materials/logs/C/log.txt",
+      "sha256": "0fa46d9e9485f5a302725c097ee5456e3e619fb3c5837c528ac18396fc82af6f",
+      "passed": true
+    },
+    {
+      "path": "logs/C/train.log",
+      "original_member": "course_materials/logs/C/train.log",
+      "sha256": "56ebb749c1dfd95e7cdf1217025d0da90187e8016ff8bfd1a669c4332c4d89bd",
+      "passed": true
+    },
+    {
+      "path": "logs/D/log.txt",
+      "original_member": "course_materials/logs/D/log.txt",
+      "sha256": "9da956ae42587da823578462da6fa2c3ceb7b749623c3d47882c77e240a1d121",
+      "passed": true
+    },
+    {
+      "path": "logs/D/train.log",
+      "original_member": "course_materials/logs/D/train.log",
+      "sha256": "8a4f78d0b0f01a68e0922c91c29e571ee0cb8e264342f63ac6106ff36a71b79c",
+      "passed": true
+    },
+    {
+      "path": "logs/E/log.txt",
+      "original_member": "course_materials/logs/E/log.txt",
+      "sha256": "55ee4820f57346aafd4ec790ff9be423f5385733fd1a371f143d496f86eed1fe",
+      "passed": true
+    },
+    {
+      "path": "logs/E/train.log",
+      "original_member": "course_materials/logs/E/train.log",
+      "sha256": "69d927aa83e0f61210f39bec7063bbf2e35ab13f46807f35c580bc418d562671",
+      "passed": true
+    },
+    {
+      "path": "logs/F/log.txt",
+      "original_member": "course_materials/logs/F/log.txt",
+      "sha256": "8282323a221d5c843d552612ecfc5101cea38503fab20ebe90f1a56e9b553fe1",
+      "passed": true
+    },
+    {
+      "path": "logs/F/train.log",
+      "original_member": "course_materials/logs/F/train.log",
+      "sha256": "aa0e66951a2d8997a61805c03e04c42b5b53a835decd1c61fe253ec098e22ab4",
+      "passed": true
+    },
+    {
+      "path": "logs/A/final_validation/val.log",
+      "original_member": "course_materials/logs/A/final_validation/val.log",
+      "sha256": "0096bab62fdf3166ab6d9d12b693c21fdf2c2f70f6a2e9e3c343f0239ea46921",
+      "passed": true
+    },
+    {
+      "path": "logs/B/final_validation/val.log",
+      "original_member": "course_materials/logs/B/final_validation/val.log",
+      "sha256": "63c635b8a1a5f0bad48a6511c0a1f96be2cdd80fa1de42be72191c3b16fff8db",
+      "passed": true
+    },
+    {
+      "path": "logs/C/final_validation/val.log",
+      "original_member": "course_materials/logs/C/final_validation/val.log",
+      "sha256": "2c5c8a69113aea4e9b0fd60f8a73f69a24c7bd28ac5db2089e6d0c8bac195cc7",
+      "passed": true
+    },
+    {
+      "path": "logs/D/final_validation/val.log",
+      "original_member": "course_materials/logs/D/final_validation/val.log",
+      "sha256": "d88d6b12a4848b227052f1df69b131dd36b20905b369801b2f6b0fbd6ab489bc",
+      "passed": true
+    },
+    {
+      "path": "logs/E/final_validation/val.log",
+      "original_member": "course_materials/logs/E/final_validation/val.log",
+      "sha256": "ab0f86df401198781b36e7bc2ed0fa3877cbb6a09a1eeeba25de60b2275dc2b2",
+      "passed": true
+    },
+    {
+      "path": "logs/F/final_validation/val.log",
+      "original_member": "course_materials/logs/F/final_validation/val.log",
+      "sha256": "f20907fca5ebeda57b79f13e98c1f6d5bdbf7ef8c85a863158512c69d7b12374",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/dataset_audit.json",
+      "original_member": "course_materials/results/experiments/A/dataset_audit.json",
+      "sha256": "cb4f8e5bff99e31ef2920193e8bfbb379fdc949228d271f2587e2827199dbc6e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/environment.freeze.txt",
+      "original_member": "course_materials/results/experiments/A/environment.freeze.txt",
+      "sha256": "7a755a6fab382acccd57d568755aa307d3f953ee31ae3372312bb2ce4fa54885",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/environment.json",
+      "original_member": "course_materials/results/experiments/A/environment.json",
+      "sha256": "1139324204432f5694e8e1e44c691289106a068b6f96019730de49b112ea6986",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/metrics_plot.png",
+      "original_member": "course_materials/results/experiments/A/metrics_plot.png",
+      "sha256": "723b367fd8b975d64eb1b455e19f7d4e4eb5b02fd5b24ed930950b40bb22a81e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/resolved_config.json",
+      "original_member": "course_materials/results/experiments/A/resolved_config.json",
+      "sha256": "96f37f801fd7859692b8a39b7a98e4f0ab6e56a01abf30214da2c2c96942e837",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/results.json",
+      "original_member": "course_materials/results/experiments/A/results.json",
+      "sha256": "9e3d3dbb60e6b414032c0164473519c6996a12e6b6781eae2354e9317de90d1b",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/run_status.json",
+      "original_member": "course_materials/results/experiments/A/run_status.json",
+      "sha256": "38ab47fe55db24d7d28faa3811ff054d6aa15d861b510c19b5e96278bafa3bc9",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/dataset_audit.json",
+      "original_member": "course_materials/results/experiments/B/dataset_audit.json",
+      "sha256": "9bab491752023f458debaa5eb6db28b9b68231b37b0f976df9a98d65ee95794d",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/environment.freeze.txt",
+      "original_member": "course_materials/results/experiments/B/environment.freeze.txt",
+      "sha256": "7a755a6fab382acccd57d568755aa307d3f953ee31ae3372312bb2ce4fa54885",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/environment.json",
+      "original_member": "course_materials/results/experiments/B/environment.json",
+      "sha256": "1139324204432f5694e8e1e44c691289106a068b6f96019730de49b112ea6986",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/metrics_plot.png",
+      "original_member": "course_materials/results/experiments/B/metrics_plot.png",
+      "sha256": "857e18bfb11ea4f744cf3e93c9e237185a1d4abde8218b74046af9258de7ca24",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/resolved_config.json",
+      "original_member": "course_materials/results/experiments/B/resolved_config.json",
+      "sha256": "59b474ea6dcb0fca55863d514eac3defae55bb34ba7e58e8c4c726492132e414",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/results.json",
+      "original_member": "course_materials/results/experiments/B/results.json",
+      "sha256": "347accce8c61ff4711b95e52588848fcb91088ea0fc7442393bdd8b7d9a82a36",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/run_status.json",
+      "original_member": "course_materials/results/experiments/B/run_status.json",
+      "sha256": "2c7326f27133c71ddf0967facc342d28951e59d15792f1b37cfaf82cf7cbb2f8",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/voc20_common_metrics.json",
+      "original_member": "course_materials/results/experiments/B/voc20_common_metrics.json",
+      "sha256": "e3b4e0867e796619f18b3e00874e259fc5e0edc04004c0ca960d32676beac3a2",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/dataset_audit.json",
+      "original_member": "course_materials/results/experiments/C/dataset_audit.json",
+      "sha256": "d8ef0a00b8570eba1ef63dec8a2fe6a926fd5fff3d7616454c0c3d69f548efbd",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/environment.freeze.txt",
+      "original_member": "course_materials/results/experiments/C/environment.freeze.txt",
+      "sha256": "7a755a6fab382acccd57d568755aa307d3f953ee31ae3372312bb2ce4fa54885",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/environment.json",
+      "original_member": "course_materials/results/experiments/C/environment.json",
+      "sha256": "1139324204432f5694e8e1e44c691289106a068b6f96019730de49b112ea6986",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/metrics_plot.png",
+      "original_member": "course_materials/results/experiments/C/metrics_plot.png",
+      "sha256": "e96688c1c0589fe82eb51887c82cbdb20adc2ced69115e55240d7434cbc4accd",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/resolved_config.json",
+      "original_member": "course_materials/results/experiments/C/resolved_config.json",
+      "sha256": "53e79ead449badb39140468b1a7839750a5919766437f2aac21bbadd31036304",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/results.json",
+      "original_member": "course_materials/results/experiments/C/results.json",
+      "sha256": "7961da215bfd34971e4489e0b5352e54d598ba3872b4347e2dfdc95bdb7e9425",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/run_status.json",
+      "original_member": "course_materials/results/experiments/C/run_status.json",
+      "sha256": "90331a51489870bd7869daef1061d791a964181dd2199881ebae75d7f390529d",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/voc20_common_metrics.json",
+      "original_member": "course_materials/results/experiments/C/voc20_common_metrics.json",
+      "sha256": "52243a2c891fe5e7cc911f4bc133931e863d2653e38822094b93a69492902b22",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/dataset_audit.json",
+      "original_member": "course_materials/results/experiments/D/dataset_audit.json",
+      "sha256": "d8ef0a00b8570eba1ef63dec8a2fe6a926fd5fff3d7616454c0c3d69f548efbd",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/environment.freeze.txt",
+      "original_member": "course_materials/results/experiments/D/environment.freeze.txt",
+      "sha256": "7fb0a23b9cd4663b0c87a4873e9e29721c0790a48bf891a82a2350f17f400d51",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/environment.json",
+      "original_member": "course_materials/results/experiments/D/environment.json",
+      "sha256": "339bb1b865134c2fdcfb0325bff17b5e787fe8607ac40e93106ace06aa98311e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/metrics_plot.png",
+      "original_member": "course_materials/results/experiments/D/metrics_plot.png",
+      "sha256": "e964041645112ec00aefc7ce72d7b596c6b788199eb8755686658516f6823585",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/resolved_config.json",
+      "original_member": "course_materials/results/experiments/D/resolved_config.json",
+      "sha256": "1bb3f1a78d0dbdbe4218e79b260d7cd6ebd0e1fa016adacafaa85e3a8e8515bb",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/results.json",
+      "original_member": "course_materials/results/experiments/D/results.json",
+      "sha256": "76be970ac6851b706aea09823ca535fdb0655dba41d4bf5818583dce9a20d8a7",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/run_status.json",
+      "original_member": "course_materials/results/experiments/D/run_status.json",
+      "sha256": "ee62c145e4cf5d2d0e246977e649169437f92e7ae60ceee3c580a0aa39cf087b",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/satr_model_audit.json",
+      "original_member": "course_materials/results/experiments/D/satr_model_audit.json",
+      "sha256": "8ac5639437c539dd8a8508e33eb3a90adf3515326d9465df6493130c95ea604e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/voc20_common_metrics.json",
+      "original_member": "course_materials/results/experiments/D/voc20_common_metrics.json",
+      "sha256": "46a9e6d7b4bee9a37cb77e4e5e7fb6cb3450814e0d986ce2fab5ec2416460471",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/dataset_audit.json",
+      "original_member": "course_materials/results/experiments/E/dataset_audit.json",
+      "sha256": "0f29ec1ce1f93d00e60235595e31787c47ceb81a1b241f7ce5ded2c3c73c4131",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/environment.freeze.txt",
+      "original_member": "course_materials/results/experiments/E/environment.freeze.txt",
+      "sha256": "7a755a6fab382acccd57d568755aa307d3f953ee31ae3372312bb2ce4fa54885",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/environment.json",
+      "original_member": "course_materials/results/experiments/E/environment.json",
+      "sha256": "1139324204432f5694e8e1e44c691289106a068b6f96019730de49b112ea6986",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/metrics_plot.png",
+      "original_member": "course_materials/results/experiments/E/metrics_plot.png",
+      "sha256": "cfbc13d74bb35feeb2a0ae425d2e64560544c1433d5fc44c01360b7a93c74c2e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/resolved_config.json",
+      "original_member": "course_materials/results/experiments/E/resolved_config.json",
+      "sha256": "661d6aa82e43e6db01b5a54605f46bd5db252419f3ab402d750a609b2c05a89e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/results.json",
+      "original_member": "course_materials/results/experiments/E/results.json",
+      "sha256": "6c0c76a741f1148b09cd012eb843c15dee91adbf9ac3730a6fe6ff9c81a71b3f",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/run_status.json",
+      "original_member": "course_materials/results/experiments/E/run_status.json",
+      "sha256": "8baabe4f7f50dd958cd7b99bfaada196a37e9670c5ed53d3d54d94d9c8ce72f3",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/dataset_audit.json",
+      "original_member": "course_materials/results/experiments/F/dataset_audit.json",
+      "sha256": "0f29ec1ce1f93d00e60235595e31787c47ceb81a1b241f7ce5ded2c3c73c4131",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/environment.freeze.txt",
+      "original_member": "course_materials/results/experiments/F/environment.freeze.txt",
+      "sha256": "7fb0a23b9cd4663b0c87a4873e9e29721c0790a48bf891a82a2350f17f400d51",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/environment.json",
+      "original_member": "course_materials/results/experiments/F/environment.json",
+      "sha256": "339bb1b865134c2fdcfb0325bff17b5e787fe8607ac40e93106ace06aa98311e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/metrics_plot.png",
+      "original_member": "course_materials/results/experiments/F/metrics_plot.png",
+      "sha256": "729b664b808583df88cd15448096968c6cd81e259177afc5aa10db582ff96692",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/resolved_config.json",
+      "original_member": "course_materials/results/experiments/F/resolved_config.json",
+      "sha256": "1dc688596f36149b3253554cad72691269e5c43e2810a64bedc18eedffb408b1",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/results.json",
+      "original_member": "course_materials/results/experiments/F/results.json",
+      "sha256": "cbbbef1af6d4c230de42de11b60b3ed54e1a04487c920dac692279a4c4911c06",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/run_status.json",
+      "original_member": "course_materials/results/experiments/F/run_status.json",
+      "sha256": "45dbd07627ff3624f0e172cb386f0a8bb21b4b24871323bfb1f2842eebfb3e67",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/satr_model_audit.json",
+      "original_member": "course_materials/results/experiments/F/satr_model_audit.json",
+      "sha256": "bfa85a8bf62709aaecc23e2da320bdb5803b4bcccfb95d958e9e87e4ea776dfa",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/A/final_validation/metrics.json",
+      "original_member": "course_materials/results/experiments/A/final_validation/metrics.json",
+      "sha256": "b877be0395e6e81bfdc3b16873d0ce0531690b8f970797acfb95d56372575a5a",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/B/final_validation/metrics.json",
+      "original_member": "course_materials/results/experiments/B/final_validation/metrics.json",
+      "sha256": "506dab9ee38f7f8a63ddb156278d43d4d8906384589d874ab1b6a0ec99ecbbe2",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/C/final_validation/metrics.json",
+      "original_member": "course_materials/results/experiments/C/final_validation/metrics.json",
+      "sha256": "2e1e77b98f3f6aa8c367240fcdbb5996c60f9c1a3685ec7bfa992bf296eeab6b",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/final_validation/metrics.json",
+      "original_member": "course_materials/results/experiments/D/final_validation/metrics.json",
+      "sha256": "53e90f9670957fb31292b2e5d713e302a877398fa703abb9de3bacd351b7ffdb",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/D/final_validation/satr_model_audit.json",
+      "original_member": "course_materials/results/experiments/D/final_validation/satr_model_audit.json",
+      "sha256": "8ac5639437c539dd8a8508e33eb3a90adf3515326d9465df6493130c95ea604e",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/E/final_validation/metrics.json",
+      "original_member": "course_materials/results/experiments/E/final_validation/metrics.json",
+      "sha256": "68520fd63dbb45651c32748ccce2cebe029e41711ebc037c817f39b4ab7bdd92",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/final_validation/metrics.json",
+      "original_member": "course_materials/results/experiments/F/final_validation/metrics.json",
+      "sha256": "38636bb89cbae0dade2831917566bb18b7efe46e59989e241f240b0a47ca2d9f",
+      "passed": true
+    },
+    {
+      "path": "results/experiments/F/final_validation/satr_model_audit.json",
+      "original_member": "course_materials/results/experiments/F/final_validation/satr_model_audit.json",
+      "sha256": "bfa85a8bf62709aaecc23e2da320bdb5803b4bcccfb95d958e9e87e4ea776dfa",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/archive_baselines.py",
+      "original_member": "course_materials/src/rfdetr_baseline/archive_baselines.py",
+      "sha256": "b833c0b7b9b9bcba6c2c8eb29281a528c472f1c48aa67bd139f1773831557716",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/ARCHIVE_SATR_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/ARCHIVE_SATR_GUIDE.md",
+      "sha256": "f1a00555a5df1c490e89f6222f9c85b5b2d9e92db8493613342dc18d4dc92094",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/archive_satr_package_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/archive_satr_package_manifest.json",
+      "sha256": "c072c2d7d1ef897acccd7d01bec5c712a9533b2edd08bd18493b0b22049d1bc5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/audit_satr_checkpoint.py",
+      "original_member": "course_materials/src/rfdetr_baseline/audit_satr_checkpoint.py",
+      "sha256": "043e216e28fb9aa9f50226d1e71079e00ff53e8d9524819c29dea71065feab51",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/category_initialization.py",
+      "original_member": "course_materials/src/rfdetr_baseline/category_initialization.py",
+      "sha256": "6ac7b77848379d2ab8d016d8a8eeecaaebb55a9cf47147540164b6b3b5eb8eb3",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/COCO_M3FD.md",
+      "original_member": "course_materials/src/rfdetr_baseline/COCO_M3FD.md",
+      "sha256": "127159b0c00139dd06d01e78224f67828337f4aeb976addd0779e6d40559ea89",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/coco_tools.py",
+      "original_member": "course_materials/src/rfdetr_baseline/coco_tools.py",
+      "sha256": "06ed485bb92dadbec94e4070ccd818383923f5bc173533ae82f2ac47429f02f7",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/coco_voc20.py",
+      "original_member": "course_materials/src/rfdetr_baseline/coco_voc20.py",
+      "sha256": "2f9e601469bde88abc1093a29e61ca19d608702a95517a58c23af47930952943",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/COCO_VOC20_EXPERIMENTS.md",
+      "original_member": "course_materials/src/rfdetr_baseline/COCO_VOC20_EXPERIMENTS.md",
+      "sha256": "b2beb4fcde5c85c54dd05ac9f7d37ad5e7b481ddc2afdb749336c284f1d92019",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/coco_voc20_package_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/coco_voc20_package_manifest.json",
+      "sha256": "5284b42a5c8c3bd2abb7ae512916f1d0c17b09290c8e6dbe7e93ad3629598f30",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/common.py",
+      "original_member": "course_materials/src/rfdetr_baseline/common.py",
+      "sha256": "53149030969d33887531088ef0b1975f3531c96c3ea184e77d423fb7e880953a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/constraints.txt",
+      "original_member": "course_materials/src/rfdetr_baseline/constraints.txt",
+      "sha256": "02203794141b2c6e9a9aafc0d945c4233802098e348a51b9be0c55c8fd89f5e0",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/COURSE_PACK_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/COURSE_PACK_GUIDE.md",
+      "sha256": "274ca7d1315d2f90b536f906e35eb18b94bf7ccd10558c5720fbd4e33d7369d2",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/dataset_backend.py",
+      "original_member": "course_materials/src/rfdetr_baseline/dataset_backend.py",
+      "sha256": "d78e7f5df33d8c9f0304ab70c0b0713d4db90adf43345a077752fdc139a89a11",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/data_tools.py",
+      "original_member": "course_materials/src/rfdetr_baseline/data_tools.py",
+      "sha256": "89d1f173a55dab6d135c2e12cd26e0bd730ea8c51a188f9554f0c0736d55a7c5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/download_weights.py",
+      "original_member": "course_materials/src/rfdetr_baseline/download_weights.py",
+      "sha256": "4f498177a655db69ec18277835ec49f0634ee0325d4c843727cfffb6c74e573a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/environment.yml",
+      "original_member": "course_materials/src/rfdetr_baseline/environment.yml",
+      "sha256": "9b9f110e57d7b53f9099077f51162e7acda0e4322a1a5e2988e6609e7a15556a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/evaluate.py",
+      "original_member": "course_materials/src/rfdetr_baseline/evaluate.py",
+      "sha256": "511e666482194be8bd034a49071cd5ef86790b48a17431a12a68d102d4bed3a7",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/evaluate_satr.py",
+      "original_member": "course_materials/src/rfdetr_baseline/evaluate_satr.py",
+      "sha256": "d940029628bc2a3502d5ffc8497cf00809efe180519cfa211503c6b7b5ac9571",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/export_satr_backbone.py",
+      "original_member": "course_materials/src/rfdetr_baseline/export_satr_backbone.py",
+      "sha256": "639e5b58c5436db89b4b9480f8486e78381b40c059885135649c2cdd5efa5f68",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/FIX_STORAGE_2080TI.md",
+      "original_member": "course_materials/src/rfdetr_baseline/FIX_STORAGE_2080TI.md",
+      "sha256": "a4c61bbc16884aaad7522e692b31606c7930100adcfacd68b5bd940b3129c373",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/M3FD_PREPARE_NEXT.md",
+      "original_member": "course_materials/src/rfdetr_baseline/M3FD_PREPARE_NEXT.md",
+      "sha256": "d000943528a3b72a6533c74bce5da95cbb14d2c46ff6e5a680162ba111f8f3fe",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/m3fd_prepare_patch_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/m3fd_prepare_patch_manifest.json",
+      "sha256": "de951f8aa24e35900488746dded4c24b6a9f22d909e35c8f9a295527dec066cb",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/package_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/package_manifest.json",
+      "sha256": "2105f624eb7ec5715c2b9c06c5b66de0e0c4f4a43c673211a654e30922dcae75",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/PAIRED_QUEUE_FIX.md",
+      "original_member": "course_materials/src/rfdetr_baseline/PAIRED_QUEUE_FIX.md",
+      "sha256": "b2bd4e41cb6605a9bd2eb46f9db686c7d1449581962a9fea86767152f0f6ce9a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/paired_queue_fix_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/paired_queue_fix_manifest.json",
+      "sha256": "05d234e5a61b4f2914f694fbdfc435558ce1071dd6dc61049600dd97885dfea8",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/predict.py",
+      "original_member": "course_materials/src/rfdetr_baseline/predict.py",
+      "sha256": "5264de832388dc45219613358e6bfea1d78bf7e18a5dc33884fa1295a8053080",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/prepare_ourmamba_m3fd.py",
+      "original_member": "course_materials/src/rfdetr_baseline/prepare_ourmamba_m3fd.py",
+      "sha256": "efb9a5dbc534580cded39cb5a58b0100523984ca1a3a4e50b1a35a13ad770bce",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/prepare_satr_configs.py",
+      "original_member": "course_materials/src/rfdetr_baseline/prepare_satr_configs.py",
+      "sha256": "14a5cd18d71bc6d58b9e0e0c26ad67362dd95f416d5fc65bfe503e8daf1b2c32",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/README.md",
+      "original_member": "course_materials/src/rfdetr_baseline/README.md",
+      "sha256": "18bb922b26e73068699b7d4630c20b120599199198707843b601b66d546f8510",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/requirements.lock",
+      "original_member": "course_materials/src/rfdetr_baseline/requirements.lock",
+      "sha256": "e561ae910aa562c0066896180d75625f558b2074099e76df5d51466b0ce07118",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/requirements.txt",
+      "original_member": "course_materials/src/rfdetr_baseline/requirements.txt",
+      "sha256": "0465d7012cc8af0da214b18fbb84358f40052cbda1814a98a5ec511c2de108df",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/run_both.py",
+      "original_member": "course_materials/src/rfdetr_baseline/run_both.py",
+      "sha256": "4c06268838266a5ba40e9a5126f8be655ea1a7935be0910eee580e5371a9cdf9",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_backbone.py",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_backbone.py",
+      "sha256": "54c1ed0c8821430cd174ef7099a142ce63905b4d30bb5b517ebc0b3271b5d73b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_checkpoint_audit_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_checkpoint_audit_manifest.json",
+      "sha256": "de0e7028d33a7b7489c234534ae2e404eb34645fd8c420e1a709662ea83633d4",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_codec.py",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_codec.py",
+      "sha256": "3aefaa59ba9ec8cfe3dd6b3b65e74ace5054d447705be246c62ea5577eb3f80a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_CP312_OFFLINE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_CP312_OFFLINE.md",
+      "sha256": "709d35ff999814f62a58ce5f4c59a6467ffe2366a1356d461ad204c91bd305bd",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_cp312_offline_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_cp312_offline_manifest.json",
+      "sha256": "ab1a138fbf83696a8ec3d63467f434c7a7b18ddd1a490c735e7a73757fcd8fd9",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_env_cached_fix_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_env_cached_fix_manifest.json",
+      "sha256": "79dbda6f7a6491ec45c08116fba8cf21c7600b81f1bc90ca3e0d0bb685ec4cea",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_PY312_CUTLASS_FIX_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_PY312_CUTLASS_FIX_GUIDE.md",
+      "sha256": "133cf6e7925bc427530845d02f3b47f87bc89cbf6133cfaf34f48c1c599258ed",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_py312_cutlass_fix_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_py312_cutlass_fix_manifest.json",
+      "sha256": "0d9c5f1973d8781ad3b8338916b110280202f028d5810cfad60c0d31a1bde184",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_PY312_FORMAL_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_PY312_FORMAL_GUIDE.md",
+      "sha256": "afcdbd2a6df1475a5b15a8107571dcd111bd6bf95fdf82f3e6c4a6b976116bd8",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_py312_formal_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_py312_formal_manifest.json",
+      "sha256": "1b2cd53f713c6722204bf3cbc3513683f80a64a337d794135562fd9a6cdd13da",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_PY312_TRAIN_TEST_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_PY312_TRAIN_TEST_GUIDE.md",
+      "sha256": "2b0a80f0a38ea1c7dcd2fb2cb3c45e25c29ccef53de639cb24e711fc54b55ed5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_py312_train_test_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_py312_train_test_manifest.json",
+      "sha256": "339e41667cd9a55aeca02dfd067bcfb9281341be399e1f30fd02d23e78443239",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_router_compat.py",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_router_compat.py",
+      "sha256": "b028e61505224eddc11e64e5d79491cad8359bf9fab1eea4bb8e712973bfd3b4",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_ROUTER_COMPAT_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_ROUTER_COMPAT_GUIDE.md",
+      "sha256": "dbc725b045f75efac7e37a8201f3f5c1ff8835de1c1af2c254f81795dad80955",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_ROUTER_REPAIR_GUIDE.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_ROUTER_REPAIR_GUIDE.md",
+      "sha256": "b87af1c2019be4d5a37fb3c1262df003fbf73cb3eda5d418ef38c50ce4b09ff1",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_router_repair_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_router_repair_manifest.json",
+      "sha256": "a0ffb4b0b40dc75d958592afa10f3ea929bb5bbeaaf99d7d25186d558bd938a4",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/satr_runtime.py",
+      "original_member": "course_materials/src/rfdetr_baseline/satr_runtime.py",
+      "sha256": "6d13194edc0b53db8fbc3beb2574cf0723f89591cdce7f6b2cd2f1a0bfa5c129",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/SATR_WHEEL_FIX.md",
+      "original_member": "course_materials/src/rfdetr_baseline/SATR_WHEEL_FIX.md",
+      "sha256": "7671d77cefc7d3437f2b2b3e9fdf12dc4c8b778f4d6d753319b803f1676b2411",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/smoke_test.py",
+      "original_member": "course_materials/src/rfdetr_baseline/smoke_test.py",
+      "sha256": "89272116a5a6069db3ebad530df54a78a563ccb9a9bfba33bce75d425718d647",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/storage_2080ti_patch_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/storage_2080ti_patch_manifest.json",
+      "sha256": "118178e3f9024e3f1642cdef0195542b88bf612b11a3276d2fe119fab39d3cb3",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/train.py",
+      "original_member": "course_materials/src/rfdetr_baseline/train.py",
+      "sha256": "22899651bd782e56f9aa84e964e00726104bfa57a36c816724a3960f6642fe6c",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/training_safety.py",
+      "original_member": "course_materials/src/rfdetr_baseline/training_safety.py",
+      "sha256": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/train_coco_paired.py",
+      "original_member": "course_materials/src/rfdetr_baseline/train_coco_paired.py",
+      "sha256": "5d11018666089c659d3e0f73e8e7032f1bd6ee4dbd56e3c9fda9a291b0246777",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/train_satr.py",
+      "original_member": "course_materials/src/rfdetr_baseline/train_satr.py",
+      "sha256": "34d26d0e7fd519ff7effee8f503a2698af31a561a16e5b23a32f7380602d4af1",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/upstream_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/upstream_manifest.json",
+      "sha256": "bbc20d7ad271e8710023b9ab78ad731a2b3c4ada7c79ec9019c52919b0900a84",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_env.py",
+      "original_member": "course_materials/src/rfdetr_baseline/verify_env.py",
+      "sha256": "b962293173e29765f058066547614275a31ce96ddf2d8c0170f50025e9dfda8a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_satr_backbone.py",
+      "original_member": "course_materials/src/rfdetr_baseline/verify_satr_backbone.py",
+      "sha256": "c86f68e0a32aee8ccb1102dc0e6f324dada503e85bcfd4bf2a3fc491d7a63b8b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_satr_export_runtime.py",
+      "original_member": "course_materials/src/rfdetr_baseline/verify_satr_export_runtime.py",
+      "sha256": "281e02972d31b91ba8b89adad45dd11ecadb37ee7aea3630b668d9c760442265",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_satr_kernel.py",
+      "original_member": "course_materials/src/rfdetr_baseline/verify_satr_kernel.py",
+      "sha256": "0b44d89f7b9fe076b5f82cb3573515728e5a5e5c7559de20a1ca88d8819ae95f",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/verify_voc20_heads.py",
+      "original_member": "course_materials/src/rfdetr_baseline/verify_voc20_heads.py",
+      "sha256": "b3f606d12abeda6dbdd400223a9358d3f6bef01f177a8a5cb7137d04bf4af501",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/VOC20_HEAD_FIX.md",
+      "original_member": "course_materials/src/rfdetr_baseline/VOC20_HEAD_FIX.md",
+      "sha256": "1fc58c67ff6c0b88fd3d5655bb301b869bc137770d123a1ea65d39023b8c459e",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/voc20_head_fix_manifest.json",
+      "original_member": "course_materials/src/rfdetr_baseline/voc20_head_fix_manifest.json",
+      "sha256": "45aac9fb6454efda43f7d1021dcada8022e05cec801a501275f6d001c4a61489",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_coco.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_coco.json",
+      "sha256": "81cb70fc2253b4ab07e61db3098cc64a6fa0881b3bd7cc922317230292cdea82",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_coco20_voc_5k.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_coco20_voc_5k.json",
+      "sha256": "5d1fad2503a78e91e63180f85eaeaee271d5365c5730db76023cf28e804ff09d",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_coco20_voc_5k_satr_py312_compat_v1.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_coco20_voc_5k_satr_py312_compat_v1.json",
+      "sha256": "68fb24b424396e954ada2749f2f8ab60744c15fe7993e2c3a8ecd77f3aeaaa64",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_coco20_voc_5k_satr_py312_formal_v1.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_coco20_voc_5k_satr_py312_formal_v1.json",
+      "sha256": "8ea4a235b76c9cbd13e6b79b1ff19d7d1097a81d5f6e7c20ac876b30df085738",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_coco80_5k.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_coco80_5k.json",
+      "sha256": "5966ceea8b6f5ac75fe10cc4f44f43f6bbfbf8e0154cb5afba0aa851737d58a7",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_coco_scratch.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_coco_scratch.json",
+      "sha256": "0b514f3cf6b7263d1183e1d50eda1a4a34212e6eee0c6874fbf86e89c7625b94",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_m3fd.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_m3fd.json",
+      "sha256": "48a73c7ead9badaeda489fc634a17d1259d3b6818308bc7c05ee556b45a934b9",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_m3fd_satr_py312_compat_v1.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_m3fd_satr_py312_compat_v1.json",
+      "sha256": "30dd229c18284977717a082b2a0c3d3f5d441361da89413ccd5bc06b3a5d9db5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/configs/nano_m3fd_satr_py312_formal_v1.json",
+      "original_member": "course_materials/src/rfdetr_baseline/configs/nano_m3fd_satr_py312_formal_v1.json",
+      "sha256": "70853afddbff1d1ae5b211e37c96e06701d829ba12349003d93901e81baf48b0",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/acceptance.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/acceptance.sh",
+      "sha256": "1c3f536eaa09d176ed8b6ae33c2f479b55a8e5d9e27b7ed1e8a20a4bf5e32f67",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/archive_and_export.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/archive_and_export.sh",
+      "sha256": "e1a97b46d8468f5f5266073a0d21ab52c0fa8489d193e9ce376506ace3d9e64b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/download_coco.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/download_coco.sh",
+      "sha256": "25c301a36a8a22633137585326c98da766cc5557d23a1f284d64c3b3c0e6960a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/evaluate.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/evaluate.sh",
+      "sha256": "816d3ee3c0b5bc3d24bf8732d91d86aff2e67a86abf055f6da518a174a441e20",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/offline_satr_cp312.py",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/offline_satr_cp312.py",
+      "sha256": "3c21c0556d1db1af60bff11fa03c78b7940f225f2341d64d7b383f3bade9e8f5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/pack_course_artifacts.py",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/pack_course_artifacts.py",
+      "sha256": "6c1d52b72acbc1c55b57326ff74d911b76d97302ce9d29884243bdd261a9449c",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/pilot_satr.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/pilot_satr.sh",
+      "sha256": "c0d3c91be084ced216f0b306c886f68bf7db6293224990d89b2bda2e8c041b24",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/prepare_satr_py312.py",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/prepare_satr_py312.py",
+      "sha256": "681e2b0091f5eea219268cd5aef4546e24dbf9e086911736d278961a5fe664e7",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/repair_autodl_storage.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/repair_autodl_storage.sh",
+      "sha256": "aef73d2ad7eab26f239ff85b32810745b952cf5543ac39f102d535a8e2a6e3b1",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/run_satr_py312_formal.py",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/run_satr_py312_formal.py",
+      "sha256": "c2f47c2ec28aa88c7a447e238a8740ce820f94e4e72c8c85b93f064a70c06d82",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/run_satr_py312_test.py",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/run_satr_py312_test.py",
+      "sha256": "c040eec7528c65412afb3631296f4ce9dc374ff48f10b6a48adc71445b185ece",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/satr_wheel_cache.py",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/satr_wheel_cache.py",
+      "sha256": "71eca30491a556bce9e593e216046d7a0b165da2148d5f39baca33ff41ef3fc6",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/setup_autodl.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/setup_autodl.sh",
+      "sha256": "5211276afd2d9b084761fe1205c4372eb0c7170149869e2d301868df32236dd8",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/setup_satr_env.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/setup_satr_env.sh",
+      "sha256": "dfb9e346cf36bc88887f8e8ffd913907d0dd6e0704354eae3ed972c9821238a4",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/setup_satr_env_cached.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/setup_satr_env_cached.sh",
+      "sha256": "408db4a1f3915cfc11620f35c8537779369a972a9b8b17e0dec9be239d38e11d",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/train.sh",
+      "sha256": "ea9eb8857e1513011ac1a91fa2292bdc3830655881cae1061feab74ea1e0ad16",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_both.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/train_both.sh",
+      "sha256": "2f72fb8167851655163f2043ecac578573948efc11b2478cec6f70455752c30c",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_coco.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/train_coco.sh",
+      "sha256": "eff7596f807d3572cb743062f8a0d297f53e3f6d9cda4e75d806f8229cce1bce",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_coco_paired.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/train_coco_paired.sh",
+      "sha256": "b7bedee6fc6f4d2b04b2b6bf56974d39664d3b488c5fbf0eea78a8265c20de79",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/scripts/train_satr_both.sh",
+      "original_member": "course_materials/src/rfdetr_baseline/scripts/train_satr_both.sh",
+      "sha256": "5b4ce81337c475c49918ee67c3db9d2c804b07dc48533c857a4c383c0ad6ed19",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_baseline_archive.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_baseline_archive.py",
+      "sha256": "ccf363465f6ee519f8c141e89d259e87e2a06eccaaa7bcfd0de2909919fca358",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_checkpoint.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_checkpoint.py",
+      "sha256": "5f32ced989ac530953184fe681c2cf069e15ba33ff2a9cc0758f0792503b050e",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_coco.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_coco.py",
+      "sha256": "047bcf9bab03b9d650f29ab7c21ab8f0dc711190d879eeaa43c90bdf251bf276",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_coco_voc20.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_coco_voc20.py",
+      "sha256": "4bff181fb35f198e5687e68e898aac52ebf9fee800e48f3feff83d8641d5d428",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_course_artifacts.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_course_artifacts.py",
+      "sha256": "46a57cca3fd256cc2567ac8066320a98b6570f4cf2a5eaeaba49608d7d55e4b9",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_data.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_data.py",
+      "sha256": "f6ec7369183a6fc6f49c155fb747345cc9b704294eac77bb5a0bcd1a000f28d4",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_m3fd_prepare.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_m3fd_prepare.py",
+      "sha256": "e9d5cfb802678959160ba3551b69c7bc3e424e976e59a611627507724f385af3",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_paired_queue.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_paired_queue.py",
+      "sha256": "ac5f7f72c4f9d74204fdb6e4f03f501434d47d88726aac633f12a1f55767ebd5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_precision.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_precision.py",
+      "sha256": "0a02a1c8836f20f7cdf7c07a266db5428d705ac4c1e725dc8419a4f3f6022e99",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_satr_checkpoint_audit.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_satr_checkpoint_audit.py",
+      "sha256": "f4aa982b4155d726999d79e2a4f626084ef7443360fc88b8cb557d84f1d2e05b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_satr_interface.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_satr_interface.py",
+      "sha256": "be1cd2aafb432688d72dd0ee84c73b797d597236258f5594fefea952e97cf05c",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_satr_py312_formal.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_satr_py312_formal.py",
+      "sha256": "8280975ba652eb9d9c0e1306743a6542c8d7fffe7a1df4c72a0863938c4d04dd",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_satr_py312_trial.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_satr_py312_trial.py",
+      "sha256": "198dc7237f9182afc339d21670eab7e1b4d5e6c2153bd26bc7313393c9d4e11f",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/test_satr_router_compat.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/test_satr_router_compat.py",
+      "sha256": "02425c58d12e551151936f2b536364d0b23f92f65ebe5dd45de32ae0869bdcf8",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/fixtures/audited_router_legacy.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/fixtures/audited_router_legacy.py",
+      "sha256": "4ca833485375da6350756c3cbf2e441fd6bfc23de0ee704870b6c0857f4691cd",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/tests/fixtures/audited_router_semantic_v2.py",
+      "original_member": "course_materials/src/rfdetr_baseline/tests/fixtures/audited_router_semantic_v2.py",
+      "sha256": "c75e97cded6007a621e42a60fc2ca50e077ea8bb2950aec192e2eb51c969b0c4",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/CONTRIBUTING.md",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/CONTRIBUTING.md",
+      "sha256": "a611bf3c4496c2bd8c114d7b58b3c8adb829cf4671f08234b8f2066c60993572",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/LICENSE",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/LICENSE",
+      "sha256": "8cabf52c61130fc97a7e5da5e3685ccf44841c0c53d6f881189369b136603cca",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/mkdocs.yaml",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/mkdocs.yaml",
+      "sha256": "dbf58cb38d623bee0dc7bfafba71e8fe9b37cc9eaa308862561b670b3f0c03f8",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/pyproject.toml",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/pyproject.toml",
+      "sha256": "ba209930fd7543bad021969e13f9c04d2a3d4c949221ce6df48d1e1042de7778",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/README.md",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/README.md",
+      "sha256": "c0b04deb748027f5c661b738dc5398862eedff56fbd6f073519203c431c311ad",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/config.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/config.py",
+      "sha256": "54837dee1602e1e02766b5e415f491ce184474e1b0e724eb1d17540a475283bb",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/detr.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/detr.py",
+      "sha256": "c04b923e1ba6be2d7f930e47f312b14d866fb58a74ba8226159292d9bb277ff5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/engine.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/engine.py",
+      "sha256": "73d710ce0b429cf0da337868842756b84ee89af4b6bad41b6f1c66c510cd94f9",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/main.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/main.py",
+      "sha256": "d734f7ae5d716b298b7b2c0c59b1b76ddcc34549d266b5926bcbc1ce333041c2",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/__init__.py",
+      "sha256": "165d20144dd535a1e37603c309e0e4c989634173cfc75043e4a839be1194fac6",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/cli/main.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/cli/main.py",
+      "sha256": "748e0c779da86f3ba927d2cfb34c4a0b185aeb09ea44b4e6094bb5562e3734f5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/benchmark.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/benchmark.py",
+      "sha256": "bfc7af828c4c217289e0038c358fe1715636e8e290105bec5bd4de203a6a150f",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/export.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/export.py",
+      "sha256": "0bef9f3fb5a0785b2516049bf5ed5cf2560267ca4de644f73edd13be21de96e0",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/requirements.txt",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/requirements.txt",
+      "sha256": "3409a6bcef0d4dc249b8748169522a4085e8b53e993b3b7d37f33d82fb0781a0",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/lwdetr.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/lwdetr.py",
+      "sha256": "30529b005880b0d44765605b1c2429c759dbaef776529427555a9bee67363f14",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/matcher.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/matcher.py",
+      "sha256": "9b16c983c567292f562cc58fb1801798264a1d6fbf02a6d8362bdcbf18fec63f",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/position_encoding.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/position_encoding.py",
+      "sha256": "cb777470e7397fee52234b0e5f226fcd869e24de4aa5593f225e1aa7612f10bc",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/segmentation_head.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/segmentation_head.py",
+      "sha256": "8802c3f7744f8e63f5a28c7b3ae76266104565252f9caeef798b933ec98d7bc9",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/transformer.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/transformer.py",
+      "sha256": "2e3a1aa05f5d8bf3def0d83f1f42ff5ca7450a3054d76a1e1078d2f9806db54e",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/__init__.py",
+      "sha256": "7596d66509221d4053daa22598b42d17254806a4a759b7c2fa64f1d962ed477b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/benchmark.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/benchmark.py",
+      "sha256": "d07992f8eed23cc1a327412d2e4d3c1eb5e17ac6e4d443cbd1df623a286a8898",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/box_ops.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/box_ops.py",
+      "sha256": "adc7568c3cd3333eda0c5ecdfe164055985879051ed209c813697b7e0ce4d154",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/coco_classes.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/coco_classes.py",
+      "sha256": "f8cabe1e27cee2703009f47ca8036107890e7827016b5eb15941935719af1b84",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/drop_scheduler.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/drop_scheduler.py",
+      "sha256": "37864b29d70a370b526c5b6fd8bb264ab1e556b5ca29d9074ca97bfffd66b141",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/early_stopping.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/early_stopping.py",
+      "sha256": "5f997349a31113d2b5d9e94f4ae96b67d2c579f955d3633ac34ae059ec8b61fe",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/files.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/files.py",
+      "sha256": "e5a3a578cbc8fa55f88762339760f335b4e8807eefca5b98a6948ee4e9cd30df",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/get_param_dicts.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/get_param_dicts.py",
+      "sha256": "b99b3e664058c8aeea3e545eb751580f0032290da57334118153f6532beabfe5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/metrics.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/metrics.py",
+      "sha256": "84622bae8d6f574862b7d4a807ead21ea5307ce7d7129ee83bd31955dab089be",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/misc.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/misc.py",
+      "sha256": "63b1056697f6ac242f12962c5ac955ce8c1d48771df9c3d55ad9cc09ebc4578a",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/obj365_to_coco_model.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/obj365_to_coco_model.py",
+      "sha256": "4b01ecf6fc879de2f44512ac8ef05fffb92aba3e29d50a89ba1c41673dca820e",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/utils.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/utils.py",
+      "sha256": "5c1d829c12ec2c19f3ab6d7a08b2fb3181ec5e6c9f6845e0b4fd28f457b05710",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/util/__init__.py",
+      "sha256": "e4153c3ef07cf85e502d9a5c7d890bdafc26e64f9de5c1e65e58e07a7973fc0d",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/optimizer.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/optimizer.py",
+      "sha256": "2e0841e5c0805f9b7de162403daf099686e42a0d06bca35b42882680b9e84665",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/symbolic.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/symbolic.py",
+      "sha256": "fd8d0ef227eb7be9f12e164d19cc3b1e1a0794bfdc6fd85cd5e8be573e6e303e",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/deploy/_onnx/__init__.py",
+      "sha256": "42fefaab0cf6eed92b0407ac873ecb129cc23bb2107423621d4e9ef68018fa75",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/backbone.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/backbone.py",
+      "sha256": "a50de9080b06e1e6889b735f43571c9f8443aa51ea089f0f78d10cbd8b7e7678",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/base.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/base.py",
+      "sha256": "63669a252248645f5327cca4c21710f1a79b31252bc95f1c443ba222fb0af117",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2.py",
+      "sha256": "5a1293be86accda1797d540528e2f58efe8b0cb142717dba09dc521473f96c9b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_with_windowed_attn.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_with_windowed_attn.py",
+      "sha256": "7629d4818fb393d34c781aedb0600d912fd08aaba23c1cbeb4463832f72f146b",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/projector.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/projector.py",
+      "sha256": "9e11c9f6b87a8c33fc10f303402ddf3aa0f653c137f99499102e594ff245e572",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/__init__.py",
+      "sha256": "e775ea3181127c7256be9a160953abcb3a20ba8cdc266db2a9a365b575c2f645",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_base.json",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_base.json",
+      "sha256": "442e0879bab13b4b3790925aeef016b32e687613d2688c9f5590df1fa417c975",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_large.json",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_large.json",
+      "sha256": "0a9650ed15d31d029d9ed5c0340c4a10a497967cdddfecc842ee2626dae1ea90",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_small.json",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_small.json",
+      "sha256": "339c338ea319ec719139e41b3860c650a847607d2338246ac2e95d9d80011f63",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_with_registers_base.json",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_with_registers_base.json",
+      "sha256": "c19f71d416b588fc4c6cc6f518c2380ea4d94064498a5346476e455e5940a151",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_with_registers_large.json",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_with_registers_large.json",
+      "sha256": "adfdc8bcd9c38c35ff447f48b011d750ddb8d41e96e1d1390492c314aab26ff5",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_with_registers_small.json",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/backbone/dinov2_configs/dinov2_with_registers_small.json",
+      "sha256": "f1eb3da01a2b935f9ea2133d1252b30187a5ddb551cfd6b1f76a791908cd9f0e",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/functions/ms_deform_attn_func.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/functions/ms_deform_attn_func.py",
+      "sha256": "50733bdfe0434ebcb74c72aa8d4e27bd1bc76df71a7f6b58e7e3d48186fbe90c",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/functions/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/functions/__init__.py",
+      "sha256": "453911fefae8f3b0f52520bae42f582374680ef0bdcdd2a2a035ce5187faeb04",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/modules/ms_deform_attn.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/modules/ms_deform_attn.py",
+      "sha256": "c1efbe3f81b77e6a33aaf219926dec8f50725c72a5451ec84f5ba1c0c0dbd750",
+      "passed": true
+    },
+    {
+      "path": "src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/modules/__init__.py",
+      "original_member": "course_materials/src/rfdetr_baseline/vendor/rf_detr/rfdetr/models/ops/modules/__init__.py",
+      "sha256": "3a40cdcd146fc93c3f4ba9702924582f6502e5fcd1ceccf687e9d0e6ff2d7b5f",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

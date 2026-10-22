@@ -1,0 +1,24 @@
+{
+  "scope": "Exact saved predictions for included sample image IDs; not the full AP evaluation set.",
+  "group": "E",
+  "full_predictions": 630000,
+  "sample_predictions": 3900,
+  "sample_image_ids": [
+    1,
+    2,
+    3,
+    8,
+    9,
+    33,
+    34,
+    35,
+    39,
+    41,
+    42,
+    43,
+    44
+  ],
+  "full_file_sha256": "8e9e30598142dcd59a82707087354adda7654472000c66f3b9ebda3f4e85bd43",
+  "download_key": "predictions",
+  "full_restoration_path": "results/predictions/E/predictions.coco.json"
+}

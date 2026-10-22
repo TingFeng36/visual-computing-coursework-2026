@@ -1,0 +1,1643 @@
+{
+  "A": {
+    "epochs_completed": 20,
+    "config": {
+      "dataset_file": "coco",
+      "dataset_dir": "/autodl-fs/data/datasets/coco2017",
+      "output_dir": "/autodl-fs/data/rfdetr_runs/coco2017_baseline_v1",
+      "weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+      "initialization": "coco",
+      "seed": 0,
+      "resolution": 384,
+      "group_detr": 13,
+      "batch_size": 2,
+      "grad_accum_steps": 8,
+      "epochs": 20,
+      "lr": 1e-05,
+      "lr_encoder": 1.5e-05,
+      "lr_drop": 20,
+      "weight_decay": 0.0001,
+      "gradient_checkpointing": true,
+      "amp": false,
+      "multi_scale": false,
+      "expanded_scales": false,
+      "num_workers": 4,
+      "checkpoint_interval": 10,
+      "use_ema": true,
+      "run_test": false,
+      "amp_requested": true,
+      "training_precision": "float32",
+      "pretrained_weights": {
+        "source_url": "https://storage.googleapis.com/rfdetr/nano_coco/checkpoint_best_regular.pth",
+        "source_reference": "rf-detr 1.3.0 rfdetr/main.py HOSTED_MODELS",
+        "bytes": 366287238,
+        "sha256": "d8d6b9ee57d4d0ed2b1f305163624712a0532cb7bce0c747317984fc5457440d"
+      },
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "runtime_patch": {
+        "id": "rfdetr-1.3.0-first-validation-checkpoint",
+        "file_sha256": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a",
+        "scope": "accept first metric even when AP=0; preserve later upstream comparisons"
+      },
+      "num_classes": 90,
+      "test_is_validation_alias": true,
+      "full_coco2017": true
+    },
+    "metrics": {
+      "split": "valid",
+      "independent_test": false,
+      "dataset_file": "coco",
+      "full_coco2017": true,
+      "dataset_annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+      "weights_sha256": "727ee4a43b7c50be77791227fcf31be8e7ea53ee2da205f0b7a7aa0be9f7c032",
+      "resolution": 384,
+      "AP50_95": 0.4825505532436856,
+      "AP50": 0.6736437612555023,
+      "AP75": 0.5167230241767521,
+      "AP_small": 0.2511858090979908,
+      "AP_medium": 0.5313435256284976,
+      "AP_large": 0.7133810182510983,
+      "AR_100": 0.6508471711262882,
+      "COCO_stats": [
+        0.4825505532436856,
+        0.6736437612555023,
+        0.5167230241767521,
+        0.2511858090979908,
+        0.5313435256284976,
+        0.7133810182510983,
+        0.37058070291003326,
+        0.5992008116061137,
+        0.6508471711262882,
+        0.40329278636347937,
+        0.7269217192562826,
+        0.8911581197568884
+      ],
+      "eval_precision": "float32",
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "gpu": "NVIDIA GeForce RTX 2080 Ti"
+    },
+    "dataset": {
+      "dataset_file": "coco",
+      "dataset_dir": "/autodl-fs/data/datasets/coco2017",
+      "classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "truck",
+        "boat",
+        "traffic light",
+        "fire hydrant",
+        "stop sign",
+        "parking meter",
+        "bench",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "elephant",
+        "bear",
+        "zebra",
+        "giraffe",
+        "backpack",
+        "umbrella",
+        "handbag",
+        "tie",
+        "suitcase",
+        "frisbee",
+        "skis",
+        "snowboard",
+        "sports ball",
+        "kite",
+        "baseball bat",
+        "baseball glove",
+        "skateboard",
+        "surfboard",
+        "tennis racket",
+        "bottle",
+        "wine glass",
+        "cup",
+        "fork",
+        "knife",
+        "spoon",
+        "bowl",
+        "banana",
+        "apple",
+        "sandwich",
+        "orange",
+        "broccoli",
+        "carrot",
+        "hot dog",
+        "pizza",
+        "donut",
+        "cake",
+        "chair",
+        "couch",
+        "potted plant",
+        "bed",
+        "dining table",
+        "toilet",
+        "tv",
+        "laptop",
+        "mouse",
+        "remote",
+        "keyboard",
+        "cell phone",
+        "microwave",
+        "oven",
+        "toaster",
+        "sink",
+        "refrigerator",
+        "book",
+        "clock",
+        "vase",
+        "scissors",
+        "teddy bear",
+        "hair drier",
+        "toothbrush"
+      ],
+      "category_names": {
+        "1": "person",
+        "2": "bicycle",
+        "3": "car",
+        "4": "motorcycle",
+        "5": "airplane",
+        "6": "bus",
+        "7": "train",
+        "8": "truck",
+        "9": "boat",
+        "10": "traffic light",
+        "11": "fire hydrant",
+        "13": "stop sign",
+        "14": "parking meter",
+        "15": "bench",
+        "16": "bird",
+        "17": "cat",
+        "18": "dog",
+        "19": "horse",
+        "20": "sheep",
+        "21": "cow",
+        "22": "elephant",
+        "23": "bear",
+        "24": "zebra",
+        "25": "giraffe",
+        "27": "backpack",
+        "28": "umbrella",
+        "31": "handbag",
+        "32": "tie",
+        "33": "suitcase",
+        "34": "frisbee",
+        "35": "skis",
+        "36": "snowboard",
+        "37": "sports ball",
+        "38": "kite",
+        "39": "baseball bat",
+        "40": "baseball glove",
+        "41": "skateboard",
+        "42": "surfboard",
+        "43": "tennis racket",
+        "44": "bottle",
+        "46": "wine glass",
+        "47": "cup",
+        "48": "fork",
+        "49": "knife",
+        "50": "spoon",
+        "51": "bowl",
+        "52": "banana",
+        "53": "apple",
+        "54": "sandwich",
+        "55": "orange",
+        "56": "broccoli",
+        "57": "carrot",
+        "58": "hot dog",
+        "59": "pizza",
+        "60": "donut",
+        "61": "cake",
+        "62": "chair",
+        "63": "couch",
+        "64": "potted plant",
+        "65": "bed",
+        "67": "dining table",
+        "70": "toilet",
+        "72": "tv",
+        "73": "laptop",
+        "74": "mouse",
+        "75": "remote",
+        "76": "keyboard",
+        "77": "cell phone",
+        "78": "microwave",
+        "79": "oven",
+        "80": "toaster",
+        "81": "sink",
+        "82": "refrigerator",
+        "84": "book",
+        "85": "clock",
+        "86": "vase",
+        "87": "scissors",
+        "88": "teddy bear",
+        "89": "hair drier",
+        "90": "toothbrush"
+      },
+      "num_classes": 90,
+      "actual_categories": 80,
+      "test_is_validation_alias": true,
+      "splits": {
+        "train": {
+          "images": 118287,
+          "objects": 860001,
+          "annotation_sha256": "610fce4944abdeb15354cc765333805529359d12d88f2f711393ca586901d01d",
+          "full_2017_split": true
+        },
+        "valid": {
+          "images": 5000,
+          "objects": 36781,
+          "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+          "full_2017_split": true
+        }
+      },
+      "full_coco2017": true,
+      "passed": true
+    },
+    "best_weights_sha256": "727ee4a43b7c50be77791227fcf31be8e7ea53ee2da205f0b7a7aa0be9f7c032",
+    "common20": null,
+    "checkpoint_audit": {
+      "classifier_tensors": {
+        "transformer.enc_out_class_embed.0.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.0.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.1.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.1.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.2.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.2.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.3.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.3.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.4.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.4.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.5.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.5.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.6.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.6.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.7.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.7.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.8.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.8.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.9.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.9.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.10.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.10.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.11.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.11.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.12.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.12.bias": [
+          91
+        ],
+        "class_embed.weight": [
+          91,
+          256
+        ],
+        "class_embed.bias": [
+          91
+        ]
+      },
+      "classifier_widths": [
+        91
+      ],
+      "checkpoint_epoch": null,
+      "has_optimizer": false,
+      "tensor_elements": 30467298
+    },
+    "task": "COCO80 full"
+  },
+  "B": {
+    "epochs_completed": 20,
+    "config": {
+      "dataset_file": "coco",
+      "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k",
+      "output_dir": "/autodl-fs/data/rfdetr_runs/coco80_5k_seed0",
+      "weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+      "initialization": "coco",
+      "seed": 0,
+      "resolution": 384,
+      "group_detr": 13,
+      "batch_size": 2,
+      "grad_accum_steps": 8,
+      "epochs": 20,
+      "lr": 1e-05,
+      "lr_encoder": 1.5e-05,
+      "lr_drop": 20,
+      "weight_decay": 0.0001,
+      "gradient_checkpointing": true,
+      "amp": false,
+      "multi_scale": false,
+      "expanded_scales": false,
+      "num_workers": 4,
+      "checkpoint_interval": 10,
+      "use_ema": true,
+      "run_test": false,
+      "amp_requested": false,
+      "training_precision": "float32",
+      "pretrained_weights": {
+        "source_url": "https://storage.googleapis.com/rfdetr/nano_coco/checkpoint_best_regular.pth",
+        "source_reference": "rf-detr 1.3.0 rfdetr/main.py HOSTED_MODELS",
+        "bytes": 366287238,
+        "sha256": "d8d6b9ee57d4d0ed2b1f305163624712a0532cb7bce0c747317984fc5457440d"
+      },
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "runtime_patch": {
+        "id": "rfdetr-1.3.0-first-validation-checkpoint",
+        "file_sha256": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a",
+        "scope": "accept first metric even when AP=0; preserve later upstream comparisons"
+      },
+      "num_classes": 90,
+      "test_is_validation_alias": true,
+      "full_coco2017": false
+    },
+    "metrics": {
+      "split": "valid",
+      "independent_test": false,
+      "dataset_file": "coco",
+      "full_coco2017": true,
+      "dataset_annotation_sha256": "2d930754a299f4286cf56778911b59698c3041001349a7669beac66778831024",
+      "weights_sha256": "d0111dd928ac3324d135c86c3d9d1de45f890fdb4e9b299fc5839072b8d4f141",
+      "resolution": 384,
+      "AP50_95": 0.4827386728704059,
+      "AP50": 0.6731164978184379,
+      "AP75": 0.5160007435195658,
+      "AP_small": 0.2527701888028805,
+      "AP_medium": 0.5355663346845354,
+      "AP_large": 0.7101886610320717,
+      "AR_100": 0.6536830327472961,
+      "COCO_stats": [
+        0.4827386728704059,
+        0.6731164978184379,
+        0.5160007435195658,
+        0.2527701888028805,
+        0.5355663346845354,
+        0.7101886610320717,
+        0.3701524399597813,
+        0.6004164702601351,
+        0.6536830327472961,
+        0.40492927110443977,
+        0.732612102663476,
+        0.8922543768436703
+      ],
+      "eval_precision": "float32",
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "gpu": "NVIDIA GeForce RTX 2080 Ti"
+    },
+    "dataset": {
+      "dataset_file": "coco",
+      "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k",
+      "classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "truck",
+        "boat",
+        "traffic light",
+        "fire hydrant",
+        "stop sign",
+        "parking meter",
+        "bench",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "elephant",
+        "bear",
+        "zebra",
+        "giraffe",
+        "backpack",
+        "umbrella",
+        "handbag",
+        "tie",
+        "suitcase",
+        "frisbee",
+        "skis",
+        "snowboard",
+        "sports ball",
+        "kite",
+        "baseball bat",
+        "baseball glove",
+        "skateboard",
+        "surfboard",
+        "tennis racket",
+        "bottle",
+        "wine glass",
+        "cup",
+        "fork",
+        "knife",
+        "spoon",
+        "bowl",
+        "banana",
+        "apple",
+        "sandwich",
+        "orange",
+        "broccoli",
+        "carrot",
+        "hot dog",
+        "pizza",
+        "donut",
+        "cake",
+        "chair",
+        "couch",
+        "potted plant",
+        "bed",
+        "dining table",
+        "toilet",
+        "tv",
+        "laptop",
+        "mouse",
+        "remote",
+        "keyboard",
+        "cell phone",
+        "microwave",
+        "oven",
+        "toaster",
+        "sink",
+        "refrigerator",
+        "book",
+        "clock",
+        "vase",
+        "scissors",
+        "teddy bear",
+        "hair drier",
+        "toothbrush"
+      ],
+      "category_names": {
+        "1": "person",
+        "2": "bicycle",
+        "3": "car",
+        "4": "motorcycle",
+        "5": "airplane",
+        "6": "bus",
+        "7": "train",
+        "8": "truck",
+        "9": "boat",
+        "10": "traffic light",
+        "11": "fire hydrant",
+        "13": "stop sign",
+        "14": "parking meter",
+        "15": "bench",
+        "16": "bird",
+        "17": "cat",
+        "18": "dog",
+        "19": "horse",
+        "20": "sheep",
+        "21": "cow",
+        "22": "elephant",
+        "23": "bear",
+        "24": "zebra",
+        "25": "giraffe",
+        "27": "backpack",
+        "28": "umbrella",
+        "31": "handbag",
+        "32": "tie",
+        "33": "suitcase",
+        "34": "frisbee",
+        "35": "skis",
+        "36": "snowboard",
+        "37": "sports ball",
+        "38": "kite",
+        "39": "baseball bat",
+        "40": "baseball glove",
+        "41": "skateboard",
+        "42": "surfboard",
+        "43": "tennis racket",
+        "44": "bottle",
+        "46": "wine glass",
+        "47": "cup",
+        "48": "fork",
+        "49": "knife",
+        "50": "spoon",
+        "51": "bowl",
+        "52": "banana",
+        "53": "apple",
+        "54": "sandwich",
+        "55": "orange",
+        "56": "broccoli",
+        "57": "carrot",
+        "58": "hot dog",
+        "59": "pizza",
+        "60": "donut",
+        "61": "cake",
+        "62": "chair",
+        "63": "couch",
+        "64": "potted plant",
+        "65": "bed",
+        "67": "dining table",
+        "70": "toilet",
+        "72": "tv",
+        "73": "laptop",
+        "74": "mouse",
+        "75": "remote",
+        "76": "keyboard",
+        "77": "cell phone",
+        "78": "microwave",
+        "79": "oven",
+        "80": "toaster",
+        "81": "sink",
+        "82": "refrigerator",
+        "84": "book",
+        "85": "clock",
+        "86": "vase",
+        "87": "scissors",
+        "88": "teddy bear",
+        "89": "hair drier",
+        "90": "toothbrush"
+      },
+      "num_classes": 90,
+      "actual_categories": 80,
+      "test_is_validation_alias": true,
+      "splits": {
+        "train": {
+          "images": 5000,
+          "objects": 35966,
+          "annotation_sha256": "b33a71cd23c1d18898b933841b5cc7db42405aaffbabd463298cd09d7257682f",
+          "full_2017_split": false
+        },
+        "valid": {
+          "images": 5000,
+          "objects": 36781,
+          "annotation_sha256": "2d930754a299f4286cf56778911b59698c3041001349a7669beac66778831024",
+          "full_2017_split": true
+        }
+      },
+      "full_coco2017": false,
+      "passed": true
+    },
+    "best_weights_sha256": "d0111dd928ac3324d135c86c3d9d1de45f890fdb4e9b299fc5839072b8d4f141",
+    "common20": {
+      "evaluation": "custom COCO VOC-overlap20 on original full val2017",
+      "label_space": "original",
+      "category_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        62,
+        63,
+        64,
+        67,
+        72
+      ],
+      "images": 5000,
+      "AP50_95": 0.542936652874944,
+      "AP50": 0.7467039200581388,
+      "AP75": 0.5801437509309488,
+      "COCO_stats": [
+        0.542936652874944,
+        0.7467039200581388,
+        0.5801437509309488,
+        0.2524418110346287,
+        0.5474767085411087,
+        0.7532277748142296,
+        0.3830029240375447,
+        0.6373454784836955,
+        0.6953449902549355,
+        0.4093770388213524,
+        0.7316295991694569,
+        0.9054838980847003
+      ],
+      "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+      "predictions_sha256": "f24fe7e4441a359272cb51f1727311c114ff3a25b518433097a19b971f4ed485",
+      "warning": "Missing-image predictions count as no detections; use complete evaluate.py exports"
+    },
+    "checkpoint_audit": {
+      "classifier_tensors": {
+        "transformer.enc_out_class_embed.0.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.0.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.1.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.1.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.2.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.2.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.3.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.3.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.4.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.4.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.5.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.5.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.6.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.6.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.7.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.7.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.8.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.8.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.9.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.9.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.10.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.10.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.11.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.11.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.12.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.12.bias": [
+          91
+        ],
+        "class_embed.weight": [
+          91,
+          256
+        ],
+        "class_embed.bias": [
+          91
+        ]
+      },
+      "classifier_widths": [
+        91
+      ],
+      "checkpoint_epoch": null,
+      "has_optimizer": false,
+      "tensor_elements": 30467298
+    },
+    "task": "COCO80 paired5k"
+  },
+  "C": {
+    "epochs_completed": 20,
+    "config": {
+      "dataset_file": "roboflow",
+      "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k",
+      "output_dir": "/autodl-fs/data/rfdetr_runs/coco20_voc_5k_seed0",
+      "weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+      "initialization": "coco",
+      "source_category_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        62,
+        63,
+        64,
+        67,
+        72
+      ],
+      "seed": 0,
+      "resolution": 384,
+      "group_detr": 13,
+      "batch_size": 2,
+      "grad_accum_steps": 8,
+      "epochs": 20,
+      "lr": 1e-05,
+      "lr_encoder": 1.5e-05,
+      "lr_drop": 20,
+      "weight_decay": 0.0001,
+      "gradient_checkpointing": true,
+      "amp": false,
+      "multi_scale": false,
+      "expanded_scales": false,
+      "num_workers": 4,
+      "checkpoint_interval": 10,
+      "use_ema": true,
+      "run_test": false,
+      "amp_requested": false,
+      "training_precision": "float32",
+      "pretrained_weights": {
+        "source_url": "https://storage.googleapis.com/rfdetr/nano_coco/checkpoint_best_regular.pth",
+        "source_reference": "rf-detr 1.3.0 rfdetr/main.py HOSTED_MODELS",
+        "bytes": 366287238,
+        "sha256": "d8d6b9ee57d4d0ed2b1f305163624712a0532cb7bce0c747317984fc5457440d"
+      },
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "runtime_patch": {
+        "id": "rfdetr-1.3.0-first-validation-checkpoint",
+        "file_sha256": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a",
+        "scope": "accept first metric even when AP=0; preserve later upstream comparisons"
+      },
+      "num_classes": 20,
+      "test_is_validation_alias": true,
+      "full_coco2017": null,
+      "classifier_initialization": {
+        "method": "COCO classifier semantic row selection",
+        "source_category_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          44,
+          62,
+          63,
+          64,
+          67,
+          72
+        ],
+        "source_weights_sha256": "d8d6b9ee57d4d0ed2b1f305163624712a0532cb7bce0c747317984fc5457440d",
+        "parameter_keys": [
+          "class_embed.weight",
+          "class_embed.bias",
+          "transformer.enc_out_class_embed.0.weight",
+          "transformer.enc_out_class_embed.0.bias",
+          "transformer.enc_out_class_embed.1.weight",
+          "transformer.enc_out_class_embed.1.bias",
+          "transformer.enc_out_class_embed.2.weight",
+          "transformer.enc_out_class_embed.2.bias",
+          "transformer.enc_out_class_embed.3.weight",
+          "transformer.enc_out_class_embed.3.bias",
+          "transformer.enc_out_class_embed.4.weight",
+          "transformer.enc_out_class_embed.4.bias",
+          "transformer.enc_out_class_embed.5.weight",
+          "transformer.enc_out_class_embed.5.bias",
+          "transformer.enc_out_class_embed.6.weight",
+          "transformer.enc_out_class_embed.6.bias",
+          "transformer.enc_out_class_embed.7.weight",
+          "transformer.enc_out_class_embed.7.bias",
+          "transformer.enc_out_class_embed.8.weight",
+          "transformer.enc_out_class_embed.8.bias",
+          "transformer.enc_out_class_embed.9.weight",
+          "transformer.enc_out_class_embed.9.bias",
+          "transformer.enc_out_class_embed.10.weight",
+          "transformer.enc_out_class_embed.10.bias",
+          "transformer.enc_out_class_embed.11.weight",
+          "transformer.enc_out_class_embed.11.bias",
+          "transformer.enc_out_class_embed.12.weight",
+          "transformer.enc_out_class_embed.12.bias"
+        ],
+        "reserved_row": 0,
+        "previous_parameter_shapes": {
+          "class_embed.weight": [
+            91,
+            256
+          ],
+          "class_embed.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.0.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.0.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.1.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.1.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.2.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.2.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.3.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.3.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.4.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.4.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.5.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.5.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.6.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.6.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.7.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.7.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.8.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.8.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.9.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.9.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.10.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.10.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.11.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.11.bias": [
+            91
+          ],
+          "transformer.enc_out_class_embed.12.weight": [
+            91,
+            256
+          ],
+          "transformer.enc_out_class_embed.12.bias": [
+            91
+          ]
+        },
+        "target_rows": 21,
+        "repair": "resize actual decoder/encoder classifier tensors and synchronize Linear metadata"
+      }
+    },
+    "metrics": {
+      "split": "valid",
+      "independent_test": false,
+      "dataset_file": "roboflow",
+      "full_coco2017": null,
+      "dataset_annotation_sha256": "e15c3d6bb9fb3862c48f719046aee840b75bb49f91ef1f6a7088f6ca8282c84e",
+      "weights_sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+      "resolution": 384,
+      "AP50_95": 0.5435514820392302,
+      "AP50": 0.7483498984791926,
+      "AP75": 0.5798207251315455,
+      "AP_small": 0.25476049276302837,
+      "AP_medium": 0.5450007171347745,
+      "AP_large": 0.7560623513291306,
+      "AR_100": 0.7006675345622702,
+      "COCO_stats": [
+        0.5435514820392302,
+        0.7483498984791926,
+        0.5798207251315455,
+        0.25476049276302837,
+        0.5450007171347745,
+        0.7560623513291306,
+        0.3845606839838072,
+        0.6411756261906767,
+        0.7006675345622702,
+        0.415721338215139,
+        0.7315179560628511,
+        0.9132895091944332
+      ],
+      "eval_precision": "float32",
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "gpu": "NVIDIA GeForce RTX 2080 Ti"
+    },
+    "dataset": {
+      "dataset_dir": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k",
+      "classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "boat",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "bottle",
+        "chair",
+        "couch",
+        "potted plant",
+        "dining table",
+        "tv"
+      ],
+      "splits": {
+        "train": {
+          "images": 5000,
+          "objects": 20983,
+          "objects_per_category": {
+            "11": 231,
+            "18": 323,
+            "20": 257,
+            "10": 227,
+            "14": 439,
+            "15": 1146,
+            "17": 237,
+            "16": 1530,
+            "19": 615,
+            "2": 345,
+            "3": 1716,
+            "4": 346,
+            "6": 226,
+            "7": 192,
+            "8": 577,
+            "1": 11122,
+            "5": 230,
+            "9": 491,
+            "13": 464,
+            "12": 269
+          },
+          "annotation_sha256": "bb4a3ff75f3f27313868bd450fb58da96ee327ae146940d426b913c1a8507541"
+        },
+        "valid": {
+          "images": 5000,
+          "objects": 20950,
+          "objects_per_category": {
+            "11": 218,
+            "18": 343,
+            "20": 288,
+            "9": 440,
+            "10": 202,
+            "12": 273,
+            "13": 361,
+            "14": 380,
+            "15": 1025,
+            "17": 261,
+            "16": 1791,
+            "19": 697,
+            "2": 316,
+            "3": 1932,
+            "4": 371,
+            "5": 143,
+            "6": 285,
+            "7": 190,
+            "8": 430,
+            "1": 11004
+          },
+          "annotation_sha256": "e15c3d6bb9fb3862c48f719046aee840b75bb49f91ef1f6a7088f6ca8282c84e"
+        },
+        "test": {
+          "images": 5000,
+          "objects": 20950,
+          "objects_per_category": {
+            "11": 218,
+            "18": 343,
+            "20": 288,
+            "9": 440,
+            "10": 202,
+            "12": 273,
+            "13": 361,
+            "14": 380,
+            "15": 1025,
+            "17": 261,
+            "16": 1791,
+            "19": 697,
+            "2": 316,
+            "3": 1932,
+            "4": 371,
+            "5": 143,
+            "6": 285,
+            "7": 190,
+            "8": 430,
+            "1": 11004
+          },
+          "annotation_sha256": "e15c3d6bb9fb3862c48f719046aee840b75bb49f91ef1f6a7088f6ca8282c84e"
+        }
+      },
+      "test_is_validation_alias": true,
+      "passed": true,
+      "dataset_file": "roboflow",
+      "num_classes": 20,
+      "category_names": {
+        "1": "person",
+        "2": "bicycle",
+        "3": "car",
+        "4": "motorcycle",
+        "5": "airplane",
+        "6": "bus",
+        "7": "train",
+        "8": "boat",
+        "9": "bird",
+        "10": "cat",
+        "11": "dog",
+        "12": "horse",
+        "13": "sheep",
+        "14": "cow",
+        "15": "bottle",
+        "16": "chair",
+        "17": "couch",
+        "18": "potted plant",
+        "19": "dining table",
+        "20": "tv"
+      }
+    },
+    "best_weights_sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+    "common20": {
+      "evaluation": "custom COCO VOC-overlap20 on original full val2017",
+      "label_space": "voc20",
+      "category_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        44,
+        62,
+        63,
+        64,
+        67,
+        72
+      ],
+      "images": 5000,
+      "AP50_95": 0.5435514820392302,
+      "AP50": 0.7483498984791926,
+      "AP75": 0.5798207251315455,
+      "COCO_stats": [
+        0.5435514820392302,
+        0.7483498984791926,
+        0.5798207251315455,
+        0.25476049276302837,
+        0.5450007171347745,
+        0.7560623513291306,
+        0.3845606839838072,
+        0.6411756261906767,
+        0.7006675345622702,
+        0.415721338215139,
+        0.7315179560628511,
+        0.9132895091944332
+      ],
+      "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+      "predictions_sha256": "818e342fd30cfac8bf7201ef5a25dcf5d567c864a6da6ee6549b070b8eefa537",
+      "warning": "Missing-image predictions count as no detections; use complete evaluate.py exports"
+    },
+    "checkpoint_audit": {
+      "classifier_tensors": {
+        "transformer.enc_out_class_embed.0.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.0.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.1.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.1.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.2.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.2.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.3.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.3.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.4.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.4.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.5.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.5.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.6.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.6.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.7.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.7.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.8.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.8.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.9.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.9.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.10.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.10.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.11.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.11.bias": [
+          21
+        ],
+        "transformer.enc_out_class_embed.12.weight": [
+          21,
+          256
+        ],
+        "transformer.enc_out_class_embed.12.bias": [
+          21
+        ],
+        "class_embed.weight": [
+          21,
+          256
+        ],
+        "class_embed.bias": [
+          21
+        ]
+      },
+      "classifier_widths": [
+        21
+      ],
+      "checkpoint_epoch": null,
+      "has_optimizer": false,
+      "tensor_elements": 30215438
+    },
+    "task": "COCO VOC20 paired5k"
+  },
+  "E": {
+    "epochs_completed": 100,
+    "config": {
+      "dataset_file": "roboflow",
+      "dataset_dir": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr",
+      "output_dir": "/autodl-fs/data/rfdetr_runs/m3fd_baseline_v1",
+      "weights": "/root/autodl-tmp/OurMamba/rf_detr_repro/rfdetr_baseline/weights/rf-detr-nano.pth",
+      "initialization": "coco",
+      "seed": 0,
+      "resolution": 384,
+      "group_detr": 13,
+      "batch_size": 2,
+      "grad_accum_steps": 8,
+      "epochs": 100,
+      "lr": 0.0001,
+      "lr_encoder": 0.00015,
+      "lr_drop": 80,
+      "weight_decay": 0.0001,
+      "gradient_checkpointing": true,
+      "amp": false,
+      "multi_scale": false,
+      "expanded_scales": false,
+      "num_workers": 4,
+      "checkpoint_interval": 10,
+      "use_ema": true,
+      "run_test": false,
+      "amp_requested": true,
+      "training_precision": "float32",
+      "pretrained_weights": {
+        "source_url": "https://storage.googleapis.com/rfdetr/nano_coco/checkpoint_best_regular.pth",
+        "source_reference": "rf-detr 1.3.0 rfdetr/main.py HOSTED_MODELS",
+        "bytes": 366287238,
+        "sha256": "d8d6b9ee57d4d0ed2b1f305163624712a0532cb7bce0c747317984fc5457440d"
+      },
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "runtime_patch": {
+        "id": "rfdetr-1.3.0-first-validation-checkpoint",
+        "file_sha256": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a",
+        "scope": "accept first metric even when AP=0; preserve later upstream comparisons"
+      },
+      "num_classes": 6,
+      "test_is_validation_alias": true,
+      "full_coco2017": null
+    },
+    "metrics": {
+      "split": "valid",
+      "independent_test": false,
+      "dataset_file": "roboflow",
+      "full_coco2017": null,
+      "dataset_annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07",
+      "weights_sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+      "resolution": 384,
+      "AP50_95": 0.49299145753600815,
+      "AP50": 0.7822657925564942,
+      "AP75": 0.5025611602158688,
+      "AP_small": 0.1904391777175984,
+      "AP_medium": 0.5400297425002986,
+      "AP_large": 0.8183100912248298,
+      "AR_100": 0.5691276738238924,
+      "COCO_stats": [
+        0.49299145753600815,
+        0.7822657925564942,
+        0.5025611602158688,
+        0.1904391777175984,
+        0.5400297425002986,
+        0.8183100912248298,
+        0.31321777299218956,
+        0.5357761829361366,
+        0.5691276738238924,
+        0.3075053949592979,
+        0.6262001696545372,
+        0.8574418492930557
+      ],
+      "eval_precision": "float32",
+      "upstream": {
+        "repository": "https://github.com/roboflow/rf-detr",
+        "tag": "1.3.0",
+        "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+        "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+      },
+      "gpu": "NVIDIA GeForce RTX 2080 Ti"
+    },
+    "dataset": {
+      "dataset_dir": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr",
+      "classes": [
+        "People",
+        "Car",
+        "Bus",
+        "Motorcycle",
+        "Lamp",
+        "Truck"
+      ],
+      "splits": {
+        "train": {
+          "images": 2100,
+          "objects": 17485,
+          "objects_per_category": {
+            "1": 5837,
+            "2": 9330,
+            "4": 1188,
+            "3": 356,
+            "5": 272,
+            "6": 502
+          },
+          "annotation_sha256": "171430a17f97cc54a15a675704bcfbc9a7b28274d700b4345e0b08a9761de58f"
+        },
+        "valid": {
+          "images": 2100,
+          "objects": 16923,
+          "objects_per_category": {
+            "2": 8966,
+            "1": 5641,
+            "4": 1217,
+            "3": 344,
+            "5": 249,
+            "6": 506
+          },
+          "annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07"
+        },
+        "test": {
+          "images": 2100,
+          "objects": 16923,
+          "objects_per_category": {
+            "2": 8966,
+            "1": 5641,
+            "4": 1217,
+            "3": 344,
+            "5": 249,
+            "6": 506
+          },
+          "annotation_sha256": "6e824cb7cfbbc3f607f1bd0296aa27e002b7633d0aacc8c865abd5b9be049f07"
+        }
+      },
+      "test_is_validation_alias": true,
+      "passed": true,
+      "dataset_file": "roboflow",
+      "num_classes": 6,
+      "category_names": {
+        "1": "People",
+        "2": "Car",
+        "3": "Bus",
+        "4": "Motorcycle",
+        "5": "Lamp",
+        "6": "Truck"
+      }
+    },
+    "best_weights_sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+    "common20": null,
+    "checkpoint_audit": {
+      "classifier_tensors": {
+        "transformer.enc_out_class_embed.0.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.0.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.1.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.1.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.2.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.2.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.3.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.3.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.4.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.4.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.5.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.5.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.6.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.6.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.7.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.7.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.8.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.8.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.9.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.9.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.10.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.10.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.11.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.11.bias": [
+          91
+        ],
+        "transformer.enc_out_class_embed.12.weight": [
+          91,
+          256
+        ],
+        "transformer.enc_out_class_embed.12.bias": [
+          91
+        ],
+        "class_embed.weight": [
+          91,
+          256
+        ],
+        "class_embed.bias": [
+          91
+        ]
+      },
+      "classifier_widths": [
+        91
+      ],
+      "checkpoint_epoch": null,
+      "has_optimizer": false,
+      "tensor_elements": 30467298
+    },
+    "task": "M3FD visible6"
+  }
+}

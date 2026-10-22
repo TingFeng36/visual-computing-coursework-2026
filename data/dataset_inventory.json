@@ -1,0 +1,78 @@
+{
+  "coco2017_full": {
+    "root": "/autodl-fs/data/datasets/coco2017",
+    "backend": "coco",
+    "splits": {
+      "train": {
+        "images": 118287,
+        "objects": 860001,
+        "annotation_source": "/autodl-fs/data/datasets/coco2017/annotations/instances_train2017.json"
+      },
+      "valid": {
+        "images": 5000,
+        "objects": 36781,
+        "annotation_source": "/autodl-fs/data/datasets/coco2017/annotations/instances_val2017.json"
+      }
+    }
+  },
+  "coco80_5k": {
+    "root": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k",
+    "backend": "coco",
+    "splits": {
+      "train": {
+        "images": 5000,
+        "objects": 35966,
+        "annotation_source": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k/annotations/instances_train2017.json"
+      },
+      "valid": {
+        "images": 5000,
+        "objects": 36781,
+        "annotation_source": "/root/autodl-tmp/OurMamba/coco_paired5k/coco80_5k/annotations/instances_val2017.json"
+      }
+    }
+  },
+  "coco20_voc_5k": {
+    "root": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k",
+    "backend": "roboflow",
+    "splits": {
+      "train": {
+        "images": 5000,
+        "objects": 20983,
+        "annotation_source": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k/train/_annotations.coco.json"
+      },
+      "valid": {
+        "images": 5000,
+        "objects": 20950,
+        "annotation_source": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k/valid/_annotations.coco.json"
+      },
+      "test": {
+        "images": 5000,
+        "objects": 20950,
+        "annotation_source": "/root/autodl-tmp/OurMamba/coco_paired5k/coco20_voc_5k/test/_annotations.coco.json"
+      }
+    },
+    "sample_images": 47
+  },
+  "m3fd": {
+    "root": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr",
+    "backend": "roboflow",
+    "splits": {
+      "train": {
+        "images": 2100,
+        "objects": 17485,
+        "annotation_source": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr/train/_annotations.coco.json"
+      },
+      "valid": {
+        "images": 2100,
+        "objects": 16923,
+        "annotation_source": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr/valid/_annotations.coco.json"
+      },
+      "test": {
+        "images": 2100,
+        "objects": 16923,
+        "annotation_source": "/root/autodl-tmp/OurMamba/datasets_M3FD_rfdetr/test/_annotations.coco.json"
+      }
+    },
+    "sample_images": 13
+  }
+}

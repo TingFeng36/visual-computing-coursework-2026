@@ -1,0 +1,10 @@
+runs/
+__pycache__/
+*.pyc
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.zip
+data/annotations/**/*.json
+results/predictions/**/predictions.coco.json

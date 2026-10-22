@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "config_sha256": "e9da7c185dc6ca9285b0fe9cc84d281c1ecc44fca9b82c8dc2aa25089a3bbbfc",
+  "environment": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "platform": "Linux-5.4.0-96-generic-x86_64-with-glibc2.35",
+    "versions": {
+      "torch": "2.4.1+cu121",
+      "torchvision": "0.19.1+cu121",
+      "transformers": "4.51.3",
+      "timm": "1.0.15",
+      "peft": "0.15.2"
+    },
+    "cuda_build": "12.1",
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "total_memory_mib": 10821.9375,
+      "capability": [
+        7,
+        5
+      ],
+      "bf16_supported": true,
+      "native_bf16_supported": false,
+      "selected_precision": "float32"
+    },
+    "upstream": {
+      "repository": "https://github.com/roboflow/rf-detr",
+      "tag": "1.3.0",
+      "commit": "03aa832eb07126b8bbd0fff45790b1f2ad45be2b",
+      "archive_sha256": "cd9a6d59836ac1ea06204f24d7e7099d0b3599d4d8696b90d3aa8d2c6038d4ad"
+    },
+    "strict_target_check": false,
+    "passed": true,
+    "errors": [],
+    "runtime_profile": "satr-py312-compat-v1",
+    "native_versions": {
+      "mamba-ssm": "2.2.2",
+      "causal-conv1d": "1.4.0"
+    },
+    "strict_satr_profile_check": true,
+    "compatibility_trial": true,
+    "python_version": [
+      3,
+      12,
+      3
+    ]
+  },
+  "mamba_version": "2.2.2",
+  "selective_scan_extension": "/autodl-fs/data/venvs/rfdetr-satr-py312/lib/python3.12/site-packages/selective_scan_cuda.cpython-312-x86_64-linux-gnu.so",
+  "original_reference_feature_max_abs_error": [
+    0.0,
+    9.5367431640625e-07,
+    1.6689300537109375e-06
+  ],
+  "feature_shape": [
+    2,
+    256,
+    24,
+    24
+  ],
+  "model_audit": {
+    "trainable_tensors": 635,
+    "optimizer_tensors": 635,
+    "parameters": 9577269,
+    "encoder_parameters": 2495268,
+    "adapter_parameters": 132611,
+    "export_metadata_sha256": "928c752c46a6cab2f671f3d7475fcdfd56e0a70def61bb5fadedac7cd0860b61",
+    "runtime_profile": "satr-py312-compat-v1",
+    "compatibility_trial": true,
+    "training_native_versions": {
+      "torch": "2.4.1+cu121",
+      "mamba-ssm": "2.2.2",
+      "causal-conv1d": "1.4.0"
+    },
+    "router_compatibility": {
+      "policy": "audited-semantic-v2",
+      "checkpoint_sha256": "953575c69f410ea54f005f0f53bc564a9593b4273c93aa2a95fa8a765a7adf38",
+      "audited_original_source_sha256": {
+        "GroupMambaBlock.py": "c0b0b766eb2ec0e2f6230e5480bc62c0dd41ab5590b7cc7faca06b8aa36f72aa",
+        "dynamic_groupmamba.py": "e1c1986da8ebca98c08eaaed77092c2cca1d2fa8a5a22d5bfca4f5ae65cf2b1c",
+        "dynamic_ss2d_vis_v4.py": "ef99f9735155ab509724c3f11e35314501bf60342e61859d0ddbbea331d84853",
+        "dynamic_router_vis.py": "4ca833485375da6350756c3cbf2e441fd6bfc23de0ee704870b6c0857f4691cd",
+        "dynamic_router_vis_v2.py": "c75e97cded6007a621e42a60fc2ca50e077ea8bb2950aec192e2eb51c969b0c4",
+        "mgam_suppression_v4.py": "7b00202333104a1aac728ffbb7d65ef893cfe7261a9dfc041852e59c8be931b9",
+        "MTCP.py": "5b8afe1fc574b14f5b988b3f918e546593d20607c0f4723f240a3c464f2fd06f"
+      },
+      "routers": {
+        "model.2.mamba_blocks.0.mamba.process.router": {
+          "from_class": "ultralytics.nn.modules.dynamic_router_vis.LiteTSPEncoder",
+          "to_class": "ultralytics.nn.modules.dynamic_router_vis_v2.LiteTSPEncoder",
+          "dim": 64,
+          "parameter_objects_and_values_unchanged": true,
+          "sinkhorn_eps": 0.1,
+          "sinkhorn_max_iter": 20
+        },
+        "model.4.mamba_blocks.0.mamba.process.router": {
+          "from_class": "ultralytics.nn.modules.dynamic_router_vis.LiteTSPEncoder",
+          "to_class": "ultralytics.nn.modules.dynamic_router_vis_v2.LiteTSPEncoder",
+          "dim": 128,
+          "parameter_objects_and_values_unchanged": true,
+          "sinkhorn_eps": 0.1,
+          "sinkhorn_max_iter": 20
+        },
+        "model.6.mamba_blocks.0.mamba.process.router": {
+          "from_class": "ultralytics.nn.modules.dynamic_router_vis.LiteTSPEncoder",
+          "to_class": "ultralytics.nn.modules.dynamic_router_vis_v2.LiteTSPEncoder",
+          "dim": 128,
+          "parameter_objects_and_values_unchanged": true,
+          "sinkhorn_eps": 0.1,
+          "sinkhorn_max_iter": 20
+        },
+        "model.8.mamba_blocks.0.mamba.process.router": {
+          "from_class": "ultralytics.nn.modules.dynamic_router_vis.LiteTSPEncoder",
+          "to_class": "ultralytics.nn.modules.dynamic_router_vis_v2.LiteTSPEncoder",
+          "dim": 256,
+          "parameter_objects_and_values_unchanged": true,
+          "sinkhorn_eps": 0.1,
+          "sinkhorn_max_iter": 20
+        }
+      },
+      "learned_parameters_added": 0,
+      "scope": "In-memory class compatibility; original checkpoint and source files unchanged.",
+      "historical_forward_equivalence_proven": false,
+      "inference": "Saved parameter/child/visualization schema matches supplied semantic-only v2 source.",
+      "historical_validation_required": true
+    },
+    "satr_source_checkpoint_sha256": "953575c69f410ea54f005f0f53bc564a9593b4273c93aa2a95fa8a765a7adf38",
+    "classifier_rows": [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21
+    ],
+    "input_normalization": "inverse ImageNet normalization to original YOLO [0,1]",
+    "adapter": "P3/P4/P5: 1x1+GroupNorm, resize to P4, learned softmax weighted sum",
+    "backbone_lr_policy": "encoder=lr_encoder, adapter=lr; no DINO layer decay",
+    "comparison": "practical transfer; backbone and pretraining history differ from original DINO"
+  },
+  "mamba_forward_calls": {
+    "stages.2.mamba_blocks.0.mamba.process.s6_models.0": 6,
+    "stages.2.mamba_blocks.0.mamba.process.s6_models.1": 6,
+    "stages.2.mamba_blocks.0.mamba.process.s6_models.2": 6,
+    "stages.2.mamba_blocks.0.mamba.process.s6_models.3": 6,
+    "stages.4.mamba_blocks.0.mamba.process.s6_models.0": 6,
+    "stages.4.mamba_blocks.0.mamba.process.s6_models.1": 6,
+    "stages.4.mamba_blocks.0.mamba.process.s6_models.2": 6,
+    "stages.4.mamba_blocks.0.mamba.process.s6_models.3": 6,
+    "stages.6.mamba_blocks.0.mamba.process.s6_models.0": 6,
+    "stages.6.mamba_blocks.0.mamba.process.s6_models.1": 6,
+    "stages.6.mamba_blocks.0.mamba.process.s6_models.2": 6,
+    "stages.6.mamba_blocks.0.mamba.process.s6_models.3": 6,
+    "stages.8.mamba_blocks.0.mamba.process.s6_models.0": 6,
+    "stages.8.mamba_blocks.0.mamba.process.s6_models.1": 6,
+    "stages.8.mamba_blocks.0.mamba.process.s6_models.2": 6,
+    "stages.8.mamba_blocks.0.mamba.process.s6_models.3": 6
+  },
+  "component_gradient_checks": [
+    "stages.2.mamba_blocks.0.mamba.process.mgam",
+    "stages.2.mamba_blocks.0.mamba.process.path_consensus_proj",
+    "stages.2.mamba_blocks.0.mamba.process.router",
+    "stages.4.mamba_blocks.0.mamba.process.mgam",
+    "stages.4.mamba_blocks.0.mamba.process.path_consensus_proj",
+    "stages.4.mamba_blocks.0.mamba.process.router",
+    "stages.6.mamba_blocks.0.mamba.process.mgam",
+    "stages.6.mamba_blocks.0.mamba.process.path_consensus_proj",
+    "stages.6.mamba_blocks.0.mamba.process.router",
+    "stages.8.mamba_blocks.0.mamba.process.mgam",
+    "stages.8.mamba_blocks.0.mamba.process.path_consensus_proj",
+    "stages.8.mamba_blocks.0.mamba.process.router"
+  ],
+  "optimizer": {
+    "trainable_tensors": 635,
+    "optimizer_tensors": 635,
+    "parameters": 9577269,
+    "encoder_parameters": 2495268,
+    "adapter_parameters": 132611
+  },
+  "losses": [
+    21.83177947998047,
+    18.89474868774414,
+    17.247241973876953
+  ],
+  "peak_allocated_mib": 851.947265625,
+  "elapsed_seconds": 5.911779269576073,
+  "checkpoint_reload_passed": true,
+  "integration_source_sha256": {
+    "satr_codec.py": "3aefaa59ba9ec8cfe3dd6b3b65e74ace5054d447705be246c62ea5577eb3f80a",
+    "satr_backbone.py": "0c0750c23828c565b00c0fb30cbf33c8a96ba706ac40d7638e4373882d193107",
+    "train_satr.py": "34d26d0e7fd519ff7effee8f503a2698af31a561a16e5b23a32f7380602d4af1",
+    "evaluate_satr.py": "d940029628bc2a3502d5ffc8497cf00809efe180519cfa211503c6b7b5ac9571",
+    "verify_satr_backbone.py": "c86f68e0a32aee8ccb1102dc0e6f324dada503e85bcfd4bf2a3fc491d7a63b8b",
+    "common.py": "53149030969d33887531088ef0b1975f3531c96c3ea184e77d423fb7e880953a",
+    "train.py": "22899651bd782e56f9aa84e964e00726104bfa57a36c816724a3960f6642fe6c",
+    "evaluate.py": "511e666482194be8bd034a49071cd5ef86790b48a17431a12a68d102d4bed3a7",
+    "category_initialization.py": "6ac7b77848379d2ab8d016d8a8eeecaaebb55a9cf47147540164b6b3b5eb8eb3",
+    "training_safety.py": "75aec7607d9e88574e2fe516b965e77a05b4c05acba09fc3bdb3f82000b5699a",
+    "satr_runtime.py": "4e403b600397decb088dcc1170b8c9af67b00f72e5e2f8ca57647aea53d4c563"
+  },
+  "scope": "original SATR feature equivalence plus synthetic detector updates; real-data AP not measured"
+}

@@ -1,0 +1,58 @@
+{
+  "source": "Original logs and final_validation; raw_log_audit.json",
+  "AP_unit": "fraction in [0,1]",
+  "AP_display_decimals": 3,
+  "time_source": "train.log: Training time (training loop including validation)",
+  "groups": {
+    "A": {
+      "AP50_95": "0.483",
+      "AP50": "0.674",
+      "parameters": 30467298,
+      "parameters_M": "30.467",
+      "training_hours": "48.00",
+      "best_epoch_1based": 8
+    },
+    "B": {
+      "AP50_95": "0.483",
+      "AP50": "0.673",
+      "parameters": 30467298,
+      "parameters_M": "30.467",
+      "training_hours": "4.72",
+      "best_epoch_1based": 1
+    },
+    "C": {
+      "AP50_95": "0.544",
+      "AP50": "0.748",
+      "parameters": 30215438,
+      "parameters_M": "30.215",
+      "training_hours": "4.13",
+      "best_epoch_1based": 2
+    },
+    "D": {
+      "AP50_95": "0.006",
+      "AP50": "0.017",
+      "parameters": 9577269,
+      "parameters_M": "9.577",
+      "training_hours": "9.63",
+      "best_epoch_1based": 20
+    },
+    "E": {
+      "AP50_95": "0.493",
+      "AP50": "0.782",
+      "parameters": 30467298,
+      "parameters_M": "30.467",
+      "training_hours": "9.43",
+      "best_epoch_1based": 91
+    },
+    "F": {
+      "AP50_95": "0.315",
+      "AP50": "0.561",
+      "parameters": 9829129,
+      "parameters_M": "9.829",
+      "training_hours": "21.22",
+      "best_epoch_1based": 98
+    }
+  },
+  "common20_B_AP50_95": "0.543",
+  "common20_C_AP50_95": "0.544"
+}

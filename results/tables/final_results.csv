@@ -1,0 +1,8 @@
+﻿group,model,backbone,dataset,parameters,mAP50_95,mAP50,epochs,log_training_hours
+A,RF-DETR-Nano,DINOv2-S,COCO2017 full 80,30467298,0.483,0.674,20,48.00
+B,RF-DETR-Nano,DINOv2-S,COCO2017 paired5k 80,30467298,0.483,0.673,20,4.72
+C,RF-DETR-Nano,DINOv2-S,COCO2017 paired5k VOC20,30215438,0.544,0.748,20,4.13
+D,RF-DETR-Nano,SATR-SSM,COCO2017 paired5k VOC20,9577269,0.006,0.017,20,9.63
+E,RF-DETR-Nano,DINOv2-S,M3FD visible,30467298,0.493,0.782,100,9.43
+F,RF-DETR-Nano,SATR-SSM,M3FD visible,9829129,0.315,0.561,100,21.22
+original paper,SATR-SSM,SATR backbone,M3FD original paper protocol,3.72M,0.435,0.706,paper,paper

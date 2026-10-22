@@ -1,0 +1,18 @@
+# Prevent dependency resolution from replacing the CUDA/Mamba-compatible core.
+torch==2.4.1
+torchvision==0.19.1
+numpy==1.26.4
+Pillow==11.1.0
+scipy==1.13.1
+timm==1.0.15
+transformers==4.51.3
+tokenizers==0.21.1
+peft==0.15.2
+accelerate==1.6.0
+huggingface-hub==0.30.2
+safetensors==0.5.3
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+protobuf==5.29.4
+setuptools==75.8.0
+sympy==1.13.1

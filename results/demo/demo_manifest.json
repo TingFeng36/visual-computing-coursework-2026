@@ -1,0 +1,90 @@
+[
+  {
+    "dataset": "coco20_voc_5k",
+    "image_id": 139,
+    "file": "coco20_voc_5k_139.png",
+    "score_threshold": 0.3,
+    "baseline_group": "C",
+    "satr_group": "D",
+    "gt_boxes": 11,
+    "baseline_displayed_boxes": 12,
+    "satr_displayed_boxes": 0
+  },
+  {
+    "dataset": "coco20_voc_5k",
+    "image_id": 632,
+    "file": "coco20_voc_5k_632.png",
+    "score_threshold": 0.3,
+    "baseline_group": "C",
+    "satr_group": "D",
+    "gt_boxes": 3,
+    "baseline_displayed_boxes": 4,
+    "satr_displayed_boxes": 0
+  },
+  {
+    "dataset": "coco20_voc_5k",
+    "image_id": 724,
+    "file": "coco20_voc_5k_724.png",
+    "score_threshold": 0.3,
+    "baseline_group": "C",
+    "satr_group": "D",
+    "gt_boxes": 1,
+    "baseline_displayed_boxes": 0,
+    "satr_displayed_boxes": 0
+  },
+  {
+    "dataset": "coco20_voc_5k",
+    "image_id": 785,
+    "file": "coco20_voc_5k_785.png",
+    "score_threshold": 0.3,
+    "baseline_group": "C",
+    "satr_group": "D",
+    "gt_boxes": 1,
+    "baseline_displayed_boxes": 1,
+    "satr_displayed_boxes": 2
+  },
+  {
+    "dataset": "m3fd",
+    "image_id": 1,
+    "file": "m3fd_1.png",
+    "score_threshold": 0.3,
+    "baseline_group": "E",
+    "satr_group": "F",
+    "gt_boxes": 11,
+    "baseline_displayed_boxes": 10,
+    "satr_displayed_boxes": 11
+  },
+  {
+    "dataset": "m3fd",
+    "image_id": 2,
+    "file": "m3fd_2.png",
+    "score_threshold": 0.3,
+    "baseline_group": "E",
+    "satr_group": "F",
+    "gt_boxes": 10,
+    "baseline_displayed_boxes": 11,
+    "satr_displayed_boxes": 13
+  },
+  {
+    "dataset": "m3fd",
+    "image_id": 3,
+    "file": "m3fd_3.png",
+    "score_threshold": 0.3,
+    "baseline_group": "E",
+    "satr_group": "F",
+    "gt_boxes": 11,
+    "baseline_displayed_boxes": 11,
+    "satr_displayed_boxes": 13
+  },
+  {
+    "dataset": "m3fd",
+    "image_id": 8,
+    "file": "m3fd_8.png",
+    "score_threshold": 0.3,
+    "baseline_group": "E",
+    "satr_group": "F",
+    "gt_boxes": 12,
+    "baseline_displayed_boxes": 11,
+    "satr_displayed_boxes": 11
+  }
+]

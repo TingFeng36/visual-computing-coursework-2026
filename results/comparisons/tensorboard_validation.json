@@ -1,0 +1,80 @@
+{
+  "A": {
+    "bytes": 8752,
+    "tags": [
+      "Loss/Train",
+      "Loss/Test",
+      "Metrics/Base/AP50_90",
+      "Metrics/Base/AP50",
+      "Metrics/Base/AR50_90",
+      "Metrics/EMA/AP50_90",
+      "Metrics/EMA/AP50",
+      "Metrics/EMA/AR50_90"
+    ]
+  },
+  "B": {
+    "bytes": 8752,
+    "tags": [
+      "Loss/Train",
+      "Loss/Test",
+      "Metrics/Base/AP50_90",
+      "Metrics/Base/AP50",
+      "Metrics/Base/AR50_90",
+      "Metrics/EMA/AP50_90",
+      "Metrics/EMA/AP50",
+      "Metrics/EMA/AR50_90"
+    ]
+  },
+  "C": {
+    "bytes": 8752,
+    "tags": [
+      "Loss/Train",
+      "Loss/Test",
+      "Metrics/Base/AP50_90",
+      "Metrics/Base/AP50",
+      "Metrics/Base/AR50_90",
+      "Metrics/EMA/AP50_90",
+      "Metrics/EMA/AP50",
+      "Metrics/EMA/AR50_90"
+    ]
+  },
+  "D": {
+    "bytes": 8752,
+    "tags": [
+      "Loss/Train",
+      "Loss/Test",
+      "Metrics/Base/AP50_90",
+      "Metrics/Base/AP50",
+      "Metrics/Base/AR50_90",
+      "Metrics/EMA/AP50_90",
+      "Metrics/EMA/AP50",
+      "Metrics/EMA/AR50_90"
+    ]
+  },
+  "E": {
+    "bytes": 43472,
+    "tags": [
+      "Loss/Train",
+      "Loss/Test",
+      "Metrics/Base/AP50_90",
+      "Metrics/Base/AP50",
+      "Metrics/Base/AR50_90",
+      "Metrics/EMA/AP50_90",
+      "Metrics/EMA/AP50",
+      "Metrics/EMA/AR50_90"
+    ]
+  },
+  "F": {
+    "bytes": 43472,
+    "tags": [
+      "Loss/Train",
+      "Loss/Test",
+      "Metrics/Base/AP50_90",
+      "Metrics/Base/AP50",
+      "Metrics/Base/AR50_90",
+      "Metrics/EMA/AP50_90",
+      "Metrics/EMA/AP50",
+      "Metrics/EMA/AR50_90"
+    ]
+  }
+}

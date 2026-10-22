@@ -1,0 +1,44 @@
+[
+  {
+    "group": "A",
+    "path": "checkpoints/A/best_model.pth",
+    "bytes": 122064182,
+    "sha256": "727ee4a43b7c50be77791227fcf31be8e7ea53ee2da205f0b7a7aa0be9f7c032",
+    "parameters": 30467298
+  },
+  {
+    "group": "B",
+    "path": "checkpoints/B/best_model.pth",
+    "bytes": 122064182,
+    "sha256": "d0111dd928ac3324d135c86c3d9d1de45f890fdb4e9b299fc5839072b8d4f141",
+    "parameters": 30467298
+  },
+  {
+    "group": "C",
+    "path": "checkpoints/C/best_model.pth",
+    "bytes": 121055926,
+    "sha256": "cfb248e4f11eb6b51ccd33cc1c30cf663891d84c22f89bad569aef2e8f960a18",
+    "parameters": 30215438
+  },
+  {
+    "group": "D",
+    "path": "checkpoints/D/best_model.pth",
+    "bytes": 38609698,
+    "sha256": "383623a3fc9b64a94a5440de477312be7c9875b15d1148ef9d457fe093dc7448",
+    "parameters": 9577269
+  },
+  {
+    "group": "E",
+    "path": "checkpoints/E/best_model.pth",
+    "bytes": 122062774,
+    "sha256": "9a35684c075a59685d2f0b6ed05fb6a6513257c966379d4e67ffa4ea726ef98e",
+    "parameters": 30467298
+  },
+  {
+    "group": "F",
+    "path": "checkpoints/best_model.pth",
+    "bytes": 39616546,
+    "sha256": "493adc544be0fda736163bfa90f24501b65d380e5a44055eca682d5b70228f35",
+    "parameters": 9829129
+  }
+]

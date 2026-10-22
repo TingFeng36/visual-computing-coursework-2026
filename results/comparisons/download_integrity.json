@@ -1,0 +1,14 @@
+{
+  "analysis.zip": {
+    "passed": true,
+    "sha256": "0b74d2b26354bd494a44fe030ab3efd62229c1226ed4c9de907f13d8a9074295",
+    "bytes": 756421381,
+    "seconds": 0.7
+  },
+  "reproduce.tar": {
+    "passed": true,
+    "sha256": "05b40dd7bbb2eca5272bf456ee787231fe4ef2efdb2646b71bca954e44556d7c",
+    "bytes": 2666127360,
+    "seconds": 2.7
+  }
+}
